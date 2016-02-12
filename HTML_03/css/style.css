@@ -4,10 +4,11 @@ body {
 }
 header {
   margin-bottom: 40px;
+  display: block;
 }
 .container {
+  display: block;
   width: 968px;
-  height: 500px;
   margin: 0 auto;
   padding: 0 46px 0 46px;
   background-color: white;
@@ -61,24 +62,52 @@ header {
   background-repeat: no-repeat;
   display: block;
 }
-aside {
+.content{
+  margin-bottom: 62px;
+}
+.sidebar {
+  float: left;
   width: 240px;
 }
-aside li {
+.sidebar li {
   padding-left: 22px;
   display: block;
   border: 1px solid #c8c8c8;
   font-size: 14px;
-  color: #656363;
   font-family: Arial, sans-serif;
   line-height: 40px;
 }
-aside li a:hover {
+.sidebar li a:hover {
   padding-left: 12px;
   color: #2c2c2c;
 }
-aside a {
+.sidebar li:hover {
+  background-color: #f9f9f9;
+}
+.sidebar a {
   display: block;
   text-decoration: none;
-  color: #c8c8c8
+  color: #656363;
+}
+section {
+  margin-left: 240px;
+}
+.product-image {
+  border: 1px solid #c8c8c8;
+  margin: 0 0 40px auto;
+  width: 678px;
+  height: 400px;
+  display: flex;
+}
+.product-image img {
+  margin: auto;
+}
+section p{
+  color: #2c2c2c;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: Arial, sans-serif;
+  padding: 0 25px 0 25px;
+  width: 628px;
+  margin: 0 0 0 auto;
 }
