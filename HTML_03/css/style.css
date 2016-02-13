@@ -22,16 +22,33 @@ header {
   display: block;
 }
 .top-menu {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -1;
   display: block;
   width: 966px;
   height: 40px;
   margin: 0;
-  background-image: url(../img/top-menu-bk.png);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5e5e5e+0,595959+26,494848+77,444343+100 */
+  background: #5e5e5e;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #5e5e5e 0%, #595959 26%, #494848 77%, #444343 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #5e5e5e 0%, #595959 26%, #494848 77%, #444343 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #5e5e5e 0%, #595959 26%, #494848 77%, #444343 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', endColorstr='#444343', GradientType=0);
+  /* IE6-9 */
 }
 .top-menu li {
+  letter-spacing: normal;
+  border: 1px solid transparent;
+  margin: 0;
+  padding: 1px;
   display: inline-block;
   width: 120px;
-  line-height: 40px;
+  line-height: 36px;
   text-align: center;
   font-size: 15px;
   font-family: Arial, sans-serif;
@@ -42,25 +59,25 @@ header {
   display: block;
 }
 .top-menu li:hover {
-  background-image: url(../img/top-menu-hover-bk.png);
-}
-.top-menu li a:hover::after {
-  content: "";
-  float: right;
-  width: 1px;
-  height: 40px;
-  background-image: url(../img/top-menu-hover-border-bk.png);
-  background-repeat: no-repeat;
-  display: block;
-}
-.top-menu li a:hover::before {
-  content: "";
-  float: left;
-  width: 1px;
-  height: 40px;
-  background-image: url(../img/top-menu-hover-border-bk.png);
-  background-repeat: no-repeat;
-  display: block;
+  font-size: 15px;
+  letter-spacing: normal;
+  line-height: 38px;
+  border-left: 1px solid #838383;
+  border-right: 1px solid #838383;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4a4a4a+0,444444+28,343434+74,2e2e2e+100 */
+  background: #4a4a4a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4a4a4a 0%, #444444 28%, #343434 74%, #2e2e2e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4a4a4a 0%, #444444 28%, #343434 74%, #2e2e2e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4a4a4a 0%, #444444 28%, #343434 74%, #2e2e2e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4a4a4a', endColorstr='#2e2e2e', GradientType=0);
+  /* IE6-9 */
+  /*background-image: url(../img/top-menu-hover-bk.png);*/
 }
 .box {
   margin-bottom: 62px;
