@@ -85,6 +85,8 @@ header {
 }
 .cell a:hover{
   transform: scale(1.1);
+  -ms-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
 }
 footer{
   line-height: 72px;
