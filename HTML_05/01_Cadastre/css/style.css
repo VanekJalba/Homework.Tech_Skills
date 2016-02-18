@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body, .wrapper {
+  height: 100%;
+  min-width: 800px;
+}
+body {
+  font-family: 'Helvetica Neue';
+  background-image: url(../img/back.jpg);
+  background-position: center;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  
+  clear: both;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+header {
+  font-size: 14px;
+  color: #60b5ed;
+  text-align: right;
+  white-space: nowrap;
+  display: block;
+  height: 36px;
+  background-color: #085699;
+}
+.login {
+  color: #fefefe;
+  float: right;
+  line-height: 36px;
+  height: 36px;
+  background: #51b0dc;
+  border-radius: 2px;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#51b0dc', endColorstr='#2e7ac4', GradientType=0);
+  /* IE6-9 */
+  padding: 0 12px;
+  margin-right: 20px;
+}
+.user-bar {
+  color: #fefefe;
+  float: right;
+  line-height: 36px;
+  height: 36px;
+  border-left: 1px solid white;
+}
+.user-bar img {
+  vertical-align: middle;
+  display: inline;
+  margin-right: 10px;
+}
+.user-bar a{
+  padding: 0 12px;
+  display: block;
+  text-decoration: none;
+}
+.user-bar a:visited{
+  color: #fefefe;
+}
+.user-bar a:hover{
+  color: white;
+  background-color: #4eabda;
+}
+.top-menu {
+  float: right;
+}
+.top-menu li {
+  overflow: hidden;
+  float: left;
+}
+.top-menu a {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  text-decoration: none;
+}
+.top-menu li a:hover {
+  color: white;
+  background-color: #4eabda;
+}
+.login a:visited {
+  color: #fefefe;
+}
+.top-menu a:visited {
+  color: #60b5ed
+}
+.login-form {
+  display: inline-block;
+  vertical-align: middle;
+  width: 560px;
+}
+.wrapper:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.login-form input {
+  font-family: "Helvetica Neue";
+}
+.container-main-form {
+  padding-top: 36px;
+  padding: 36px 20px 20px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+.central-row {
+  position: relative;
+  margin: 0 auto;
+  width: 276px;
+  text-align: center;
+}
+.header-form {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  height: 62px;
+  line-height: 62px;
+  background-color: rgba(0, 0, 0, 0.37);
+  margin-bottom: 2px;
+}
+.fb-link {
+  text-align: center;
+  width: 100%;
+}
+.fb-link a {
+  display: inline-block;
+}
+.separate {
+  overflow: hidden;
+  height: 74px;
+  line-height: 74px;
+  position: relative;
+}
+.separate p::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #666666;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  right: 100%;
+  top: 37px;
+  width: 150px;
+}
+.separate p::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #666666;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  left: 100%;
+  top: 37px;
+  width: 150px;
+}
+.separate p {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  color: #999999;
+}
+.input-fields {
+  padding-right: 36px;
+  font-size: 14px;
+  color: #cccccc;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+  display: block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 18px;
+  border: none;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(75, 75, 75, 1);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(75, 75, 75, 1);
+  box-shadow: 0px 1px 0px 0px rgba(75, 75, 75, 1);
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+}
+.main-form label {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+.subscribe {
+  font-size: 14px;
+  color: #cccccc;
+}
+.main-form input[type="checkbox"] {
+  margin: 0 8px 0 0;
+  vertical-align: bottom;
+}
+.main-form input[type="submit"] {
+  background: #51b0dc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #51b0dc 0%, #3382c8 72%, #2f7bc5 88%, #2e7ac4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#51b0dc', endColorstr='#2e7ac4', GradientType=0);
+  /* IE6-9 */
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+.container-main-form .policy {
+  line-height: 16px;
+  font-size: 11px;
+  color: #cccccc;
+}
+.policy a:visited {
+  color: #cccccc;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  color: #fffbfb;
+  background-color: #1b5288;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(250, 250, 250, 0.77);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(250, 250, 250, 0.77);
+  box-shadow: 0px 0px 15px 2px rgba(250, 250, 250, 0.77);
+}

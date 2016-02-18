@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mondrian picture</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    table {
+      margin: 0 auto;
+      width: 500px;
+      height: 541px;
+      border-collapse: collapse;
+      border-style: hidden;
+    }
+
+    tr,
+    td {
+      border: 10px solid #242a26;
+    }
+
+    .white {
+      background-color: #fff;
+    }
+
+    .yellow {
+      background-color: #fff161;
+    }
+
+    .orange {
+      background-color: #ff5a30;
+    }
+
+    .black {
+      background-color: #242a26;
+    }
+
+    .blue {
+      background-color: #084684;
+    }
+
+    table tr:first-child {
+      height: 52px;
+    }
+
+    table tr:nth-of-type(2) {
+      height: 137px;
+    }
+
+    table tr:nth-of-type(3) {
+      height: 137px;
+    }
+
+    table tr:nth-of-type(4) {
+      height: 67px;
+    }
+
+    table tr:nth-of-type(5) {
+      height: 67px;
+    }
+
+    table tr:nth-of-type(6) {
+      height: 37px;
+    }
+
+    table tr:nth-of-type(1) td:nth-of-type(1) {
+      width: 24%;
+    }
+
+    table tr:nth-of-type(2) td:nth-of-type(1) {
+      width: 12%;
+    }
+
+    table tr:nth-of-type(1) td:nth-of-type(2) {
+      width: 42%;
+    }
+
+    table tr:nth-of-type(3) td:nth-of-type(2) {
+      width: 17%;
+    }
+
+    table tr:nth-of-type(4) td:nth-of-type(2) {
+      width: 28%;
+    }
+  </style>
+</head>
+
+<body>
+  <tbody>
+    <table>
+      <tr>
+        <td colspan="2" class="white"></td>
+        <td colspan="2" class="white"></td>
+        <td colspan="2" class="yellow"></td>
+      </tr>
+      <tr>
+        <td class="white"></td>
+        <td colspan="3" rowspan="2" class="orange"></td>
+        <td colspan="2" class="yellow"></td>
+      </tr>
+      <tr class="white">
+        <td rowspan="2"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2" class="black"></td>
+        <td class="white"></td>
+        <td colspan="2" class="white"></td>
+      </tr>
+      <tr>
+        <td rowspan="3" class="yellow"></td>
+        <td class="white"></td>
+        <td colspan="2" rowspan="2" class="blue"></td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2" class="white"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td colspan="3" class="white"></td>
+      </tr>
+    </table>
+  </tbody>
+</body>
+
+</html>
