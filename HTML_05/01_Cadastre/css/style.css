@@ -86,6 +86,7 @@ header {
   float: left;
 }
 .top-menu a {
+  color: #60b5ed;
   display: block;
   height: 36px;
   line-height: 36px;
