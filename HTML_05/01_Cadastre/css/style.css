@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
 }
 .wrapper {
-  
+
   clear: both;
   position: relative;
   text-align: center;
@@ -50,6 +50,9 @@ header {
   /* IE6-9 */
   padding: 0 12px;
   margin-right: 20px;
+}
+.login a{
+  color: #fefefe;
 }
 .user-bar {
   color: #fefefe;
