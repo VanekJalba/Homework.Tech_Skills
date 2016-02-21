@@ -1,0 +1,258 @@
+.wrapper{
+  width: 912px;
+  margin: 0 auto;
+  padding: 16px  44px 44px 44px;
+  background-color: red;
+  font-family: Arial, sans-serif;;
+}
+/*header*/
+header{
+  margin-bottom: 10px;
+}
+.contact-tel{
+  display: inline-block;
+  font-size: 18px;
+  color: #5e696d;
+}
+/*login form*/
+.login{
+  display: inline-block;
+/*width: 495px;*/
+height: 27px;
+background-color: green;
+}
+.login_form_header{
+  display: inline-block;
+}
+.login_form_header input[type="text"],
+.login_form_header input[type="password"]{
+border: none;
+padding: 0 4px;
+  width: 104px;
+  background-color: brown;
+}
+.login_form_header input[type="submit"]{
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.a_login_reg{
+  text-decoration: none;
+  font-size: 11px;
+  color: white;
+}
+.a_restore_password{
+  /*font-family: arial;*/
+  font-size: 11px;
+  color: #bfbfbf;
+}
+/*main links*/
+.main_links{
+  display: inline-block;
+  line-height: 22px;
+  text-align: center;
+  vertical-align: middle;;
+  width: 77px;
+  height: 22px;
+  background-color: lime;
+}
+/*big logo*/
+.big_logo{
+  display: block;
+  margin: 0 auto 6px auto;
+}
+/*main menu*/
+nav{
+  margin-bottom: 12px;
+  height: 35px;
+  line-height: 35px;
+  background-color: purple;
+}
+.main_menu,
+.main_menu li{
+  float: left;
+  /*display: inline-block;*/
+}
+.cart{
+  float: right;
+}
+/*search forms*/
+.search-forms legend{
+  font-size: 10px;
+  font-weight: bold;
+  color: #154468;
+}
+.search-forms option{
+  /*font-size: 11px;*/
+}
+.search-forms select{
+  border: none;
+  margin: 3px 0 3px 0;
+  font-size: 11px;
+  height: 16px;
+}
+.form_rows{
+  background-color: navy;
+  vertical-align: middle;
+  line-height: 8px;
+  height: 22px;
+  float: left;
+  clear: both;
+}
+.form_rows_2{
+  background-color: navy;
+  vertical-align: middle;
+  line-height: 8px;
+  height: 16px;
+  float: left;
+  clear: both;
+}
+.form_rows_3{
+  background-color: navy;
+  vertical-align: middle;
+  line-height: 10px;
+  /*height: 16px;*/
+  float: left;
+  clear: both;
+}
+.search_form_name{
+  /*float: left;*/
+  font-size: 12px;
+  font-weight: bold;
+  color: #154467;
+}
+.main_text{
+  font-size: 10px;
+  line-height: 10px;
+  color: black;
+}
+.other_text{
+  font-size: 8px;
+  line-height: 10px;
+  color: #77858b;
+}
+.other_text_2{
+  font-size: 11px;
+  /*margin: -3px 0 -3px 0;*/
+  /*color: white;*/
+}
+/*search form by auto*/
+.search_by_auto fieldset{
+  width: 50%;
+}
+.search_by_auto{
+  float: left;
+  /*display: inline-block;*/
+  background-color: green;
+  width: 413px;
+  height: 132px;
+}
+
+.search_by_auto label{
+  background-color: navy;
+  /*display: inline-block;*/
+  /*float: left;*/
+  /*height: 22px;*/
+}
+.form_rows-inner,
+.search_by_auto label p{
+  background-color: yellow;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 8px;
+}
+.form_rows:after,
+.search_by_auto label:after{
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+}
+.search_by_auto select{
+  width: 100%;
+  /*height: 16px;*/
+  /*display: block;*/
+  border: none;
+  /*height: 22px;*/
+  /*line-height: 11px;*/
+  /*vertical-align: middle;*/
+  /*text-align: justify;*/
+}
+.labels{
+  float: left;
+  vertical-align: middle;
+}
+.labels_wrapper{
+  background-color: grey;
+  /*display: inline-block;*/
+  width: 50%;
+  float: left;
+}
+.selects{
+  /*display: inline-block;*/
+  float: right;
+  width: 50%;
+}
+
+
+
+
+/*search form by tires*/
+.search_tires{
+  background-color: grey;
+  float: left;
+  /*display: inline-block;*/
+  height: 132px;
+  width: 192px;
+}
+.search_tires_labels{
+  width: 31%;
+  float: left;
+}
+.search_tires_inputs{
+  width: 69%;
+  float: left;
+}
+
+/*search form by disk*/
+.search_disk{
+  float: left;
+  background-color: green;
+  height: 132px;
+  width: 266px;
+}
+.search_disk-wrapper_left{
+  vertical-align: middle;
+  float: left;
+  width: 65%;
+}
+.labels_wrapper_3{
+  width: 60%;
+  float:left;
+}
+.inputs_wrapper_3{
+  width:  40%;
+  float:right;
+}
+.search_disk-wrapper_right{
+  vertical-align: middle;
+  float: left;
+  width: 35%;
+}
+
+
+
+
+
+
+
+
+/*clear flow*/
+  .clearfix:after{
+    display: block;
+  content: "";
+  clear: both;
+  /*overflow: hidden;*/
+  /*position: relative;*/
+}
