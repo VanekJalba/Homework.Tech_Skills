@@ -21,6 +21,7 @@
           <input type="text" name="login" placeholder="логин" required>
           <input type="password" name="password" placeholder="пароль" required>
           <input class="a_login_reg" type="submit" name="login" value="вход">
+          <span class="a_login_reg"> | </span>
         </form>
         <a class="a_login_reg" href="#">регистрация</a>
         <a class="a_restore_password" href="#">забыли пароль?</a>
@@ -32,7 +33,7 @@
       </div>
     </header>
     <img class="big_logo" src="img/big-logo.jpg" alt="">
-    <nav class="clearfix">
+    <nav class="main_menu_nav clearfix">
       <ul class="main_menu">
         <li><a href="#">О КОМПАНИИ</a></li>
         <li><a href="#">ОПЛАТА</a></li>
@@ -41,80 +42,82 @@
         <li><a href="#">КОНТАКТЫ</a></li>
       </ul>
       <div class="cart">
-        <img src="img/cart_icon.png" alt="">
-        <span>товаров:</span>
-        <span>0</span>
-        <span>на сумму:</span>
-        <span>0,00 грн.</span>
+        <img class="clearfix" src="img/cart_icon.png" alt="">
+        <span class="menu_text_price">товаров:</span>
+        <span class="menu_price">0</span>
+        <span class="menu_text_price">на сумму:</span>
+        <span class="menu_price">0,00 грн.</span>
       </div>
     </nav>
     <!-- Search forms block 3 parts -->
-    <section class="search-forms clearfix">
+    <section class="search-forms">
       <!-- Search by auto form 1/3 -->
       <form class="search_by_auto" action="index.html" method="post">
-        <p class="search_form_name">Поиск по автомобилю
-          <p>
-            <fieldset>
-              <legend>Диски:</legend>
-              <div class="labels_wrapper">
-                <div class="labels">
-                  <label class="form_rows" for="mark-auto">
-                    <p><span class="main_text">Марка </span><span class="other_text">авто:</span></p>
-                  </label>
-                  <label class="form_rows" for="model">
-                    <p><span class="main_text">Модель </span><span class="other_text">автомобиля:</span> </p>
-                  </label>
-                  <label class="form_rows" for="release_year">
-                    <p><span class="main_text">Год выпуска </span><span class="other_text">автомобиля:</span> </p>
-                  </label>
-                  <label class="form_rows" for="complect">
-                    <p><span class="main_text">Комплектация:</span></p>
-                  </label>
-                </div>
-              </div>
-              <div class="selects">
-                <select id="mark-auto">
-                  <option value="0"></option>
-                  <option value="1">Пункт1</option>
-                  <option value="2">Пункт2</option>
-                  <option value="3">Пункт3</option>
-                  <option value="4">Пункт4</option>
-                  <option value="5">Пункт5</option>
-
-                </select>
-                <select id="model">
-                  <option value="0"></option>
-                  <option value="1">Пункт1</option>
-                  <option value="2">Пункт2</option>
-                  <option value="3">Пункт3</option>
-                  <option value="4">Пункт4</option>
-                  <option value="5">Пункт5</option>
-                </select>
-
-
-                <select id="release_year">
-                  <option value="0"></option>
-                  <option value="1">Пункт1</option>
-                  <option value="2">Пункт2</option>
-                  <option value="3">Пункт3</option>
-                  <option value="4">Пункт4</option>
-                  <option value="5">Пункт5</option>
-                </select>
-
-
-                <select id="complect">
-                  <option value="0"></option>
-                  <option value="1">Пункт1</option>
-                  <option value="2">Пункт2</option>
-                  <option value="3">Пункт3</option>
-                  <option value="4">Пункт4</option>
-                  <option value="5">Пункт5</option>
-                </select>
-              </div>
-
-            </fieldset>
-            <!-- Another row in form -->
-            <!-- <fieldset>
+        <p class="search_form_name float_auto_name">Поиск по автомобилю</p>
+        <div class="s_f_auto_container">
+          <fieldset>
+            <legend>Диски:</legend>
+            <!-- <div class="labels_wrapper"> -->
+            <!-- <div class="labels"> -->
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="mark-auto">
+                <span class="main_text">Марка </span><span class="other_text">авто:</span>
+              </label>
+              <select id="mark-auto">
+                <option value="0"></option>
+                <option value="1">Пункт1</option>
+                <option value="2">Пункт2</option>
+                <option value="3">Пункт3</option>
+                <option value="4">Пункт4</option>
+                <option value="5">Пункт5</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="model">
+                <span class="main_text">Модель </span><span class="other_text">автомобиля:</span>
+              </label>
+              <select id="model">
+                <option value="0"></option>
+                <option value="1">Пункт1</option>
+                <option value="2">Пункт2</option>
+                <option value="3">Пункт3</option>
+                <option value="4">Пункт4</option>
+                <option value="5">Пункт5</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="release_year">
+                <span class="main_text">Год выпуска </span><span class="other_text">автомобиля:</span>
+              </label>
+              <select id="release_year">
+                <option value="0"></option>
+                <option value="1">Пункт1</option>
+                <option value="2">Пункт2</option>
+                <option value="3">Пункт3</option>
+                <option value="4">Пункт4</option>
+                <option value="5">Пункт5</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="complect">
+                <span class="main_text">Комплектация:</span>
+              </label>
+              <select id="complect">
+                <option value="0"></option>
+                <option value="1">Пункт1</option>
+                <option value="2">Пункт2</option>
+                <option value="3">Пункт3</option>
+                <option value="4">Пункт4</option>
+                <option value="5">Пункт5</option>
+              </select>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="selects"> -->
+            <!-- </div> -->
+          </fieldset>
+          <!-- Another row in form -->
+          <!-- <fieldset>
           <legend>Шины:</legend>
           <label><span class="main_text">Марка </span><span class="other_text">авто:</span>
             <select name="mark-auto">
@@ -157,83 +160,87 @@
             </select>
           </label>
         </fieldset> -->
-            <input type="submit" value="поиск...">
+          <input class="button_to_link" type="submit" value="поиск...">
+        </div>
       </form>
       <!-- Tires search form 2/3 -->
       <form class="search_tires" action="index.html" method="post">
-        <p class="search_form_name">ПОИСК ШИН</p>
-        <div class="search_tires_inner_wrapper clearfix">
-          <div class="search_tires_labels main_text">
-            <label class="form_rows" for="tire_diameter">
-              <p class="form_rows-inner"><span>Размер:</span></p>
-            </label>
-            <label class="form_rows" for="tire_radius">
-              <p class="form_rows-inner"><span>R</span></p>
-            </label>
-            <label class="form_rows" for="tire_season">
-              <p class="form_rows-inner"><span>Сезон:</span></p>
-            </label>
-          </div>
-          <div class="search_tires_inputs">
-
-            <div class="form_rows">
-
-
-              <select id="tire_diameter">
-                <option value="145">145</option>
-                <option value="150">150</option>
-                <option value="155">155</option>
-                <option value="160">160</option>
-                <option value="165">165</option>
-              </select>
-              <span>/</span>
-              <select id="tire_width">
-                <option value="0"></option>
-                <option value="145">145</option>
-                <option value="150">150</option>
-                <option value="155">155</option>
-                <option value="160">160</option>
-                <option value="165">165</option>
+        <div class="s_f_tire_container">
+          <p class="search_form_name">ПОИСК ШИН</p>
+          <fieldset>
+            <!-- <div class="search_tires_inner_wrapper clearfix"> -->
+            <!-- <div class="search_tires_labels main_text"> -->
+            <div class="s_f_tire_row clearfix">
+              <label class="s_f_tire_label" for="tire_diameter">
+                <span class="main_text">Размер:</span>
+              </label>
+              <div class="s_f_tire_inputs">
+                <select id="tire_diameter">
+                  <option value="145">145</option>
+                  <option value="150">150</option>
+                  <option value="155">155</option>
+                  <option value="160">160</option>
+                  <option value="165">165</option>
+                </select>
+                <span>/</span>
+                <select id="tire_width">
+                  <option value="0"></option>
+                  <option value="145">145</option>
+                  <option value="150">150</option>
+                  <option value="155">155</option>
+                  <option value="160">160</option>
+                  <option value="165">165</option>
+                </select>
+              </div>
+            </div>
+            <div class="s_f_tire_row clearfix">
+              <label class="s_f_tire_label" for="tire_radius">
+                <span class="main_text">R</span>
+              </label>
+              <select class="form_rows" name="tire_radius">
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
               </select>
             </div>
-            <select class="form_rows" name="tire_radius">
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-            </select>
-
-            <label class="form_rows_2">
-              <input type="checkbox" name="tire_season" value="summer"><span class="other_text_2">лето</span></label>
-            <label class="form_rows_2">
-              <input type="checkbox" name="tire_season" value="winter"><span class="other_text_2">зима</span></label>
-            <label class="form_rows_2">
-              <input type="checkbox" name="tire_season" value="all_seasons"><span class="other_text_2">всесез</span></label>
-
-          </div>
+            <div class="s_f_tire_row clearfix">
+              <label class="s_f_tire_label clearfix" for="tire_season">
+                <span class="main_text">Сезон:</span>
+              </label>
+              <div class="s_f_tire_checkbox_block clearfix">
+                <label class="s_f_tire_checkbox">
+                  <input type="checkbox" name="tire_season" value="summer"><span class="other_text_2">лето</span></label>
+                <label class="s_f_tire_checkbox">
+                  <input type="checkbox" name="tire_season" value="winter"><span class="other_text_2">зима</span></label>
+                <label class="s_f_tire_checkbox">
+                  <input type="checkbox" name="tire_season" value="all_seasons"><span class="other_text_2">всесез</span></label>
+              </div>
+            </div>
+            <!-- </div> -->
+            <!-- <div class="search_tires_inputs"> -->
+            <!-- <div class="form_rows"> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+          </fieldset>
+          <input class="button_to_link" type="submit" value="поиск...">
         </div>
-        <input type="submit" value="поиск...">
       </form>
       <!-- Tires search form 3/3 -->
       <form class="search_disk" action="index.html" method="post">
-            <div class="search_disk-wrapper_left">
+        <!-- <div class="search_disk-wrapper_left"> -->
+        <div class="s_f_disk_container">
+          <div class="clearfix">
+            <fieldset class="s_f_disk_field_left">
               <p class="search_form_name">ПОИСК ДИСКОВ</p>
-              <div class="labels_wrapper_3">
-                <label class="form_rows">
-                  <p class="form_rows_inner">
-                    <span class="main_text">Диаметр </span><span class="other_text">диска:</span></p>
+              <!-- <div class="labels_wrapper_3"> -->
+
+              <div class="s_f_disk_row clearfix">
+                <label class="s_f_disk_label_left">
+                  <span class="main_text">Диаметр </span><span class="other_text">диска:</span>
                 </label>
-                <label class="form_rows">
-                  <p class="form_rows_inner">
-                    <span class="main_text">Количество </span><span class="other_text">крепёжных отверстий:</span></p>
-                </label>
-                <label class="form_rows_3">
-                  <p class="form_rows_inner">
-                    <span class="main_text">Диаметр </span><span class="other_text">расположения крепёжных отверстий:</span></p>
-                </label>
-              </div>
-              <div class="inputs_wrapper_3">
                 <select name="disk_diameter">
                   <option value="14">14</option>
                   <option value="15">15</option>
@@ -241,11 +248,21 @@
                   <option value="17">17</option>
                   <option value="18">18</option>
                 </select>
+              </div>
+              <div class="s_f_disk_row clearfix">
+                <label class="s_f_disk_label_left">
+                  <span class="main_text">Количество </span><span class="other_text">крепёжных отверстий:</span>
+                </label>
                 <select name="number_of_holes">
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
+              </div>
+              <div class="s_f_disk_row clearfix">
+                <label class="s_f_disk_label_left">
+                  <span class="main_text">Диаметр </span><span class="other_text">расположения крепёжных отверстий:</span>
+                </label>
                 <select name="hole_diameter">
                   <option value="12">12</option>
                   <option value="13">13</option>
@@ -254,16 +271,23 @@
                   <option value="16">16</option>
                 </select>
               </div>
-            </div>
+            </fieldset>
+            <!-- </div> -->
+            <!-- <div class="inputs_wrapper_3"> -->
+
+
+
+            <!-- </div> -->
+            <!-- </div> -->
             <!-- another row in form -->
-<div class="search_disk-wrapper_right">
-            <div>
-              <label class="form_rows_3">
-                <p class="form_rows-inner">
+            <!-- <div class="search_disk-wrapper_right"> -->
+            <!-- <div> -->
+            <fieldset class="s_f_disk_field_right">
+              <div class="s_f_disk_row clearfix">
+                <label class="s_f_disk_label_right">
                   <p class="main_text">ДЦО</p>
                   <p class="other_text">(диаметр центрального отверстия):</p>
-                </p>
-                              </label>
+                </label>
                 <select class="form_rows" name="central_hole_diameter">
                   <option value="12">12</option>
                   <option value="13">13</option>
@@ -271,13 +295,12 @@
                   <option value="15">15</option>
                   <option value="16">16</option>
                 </select>
-
-              <label class="form_rows_3">
-                <p class="form_rows-inner">
+              </div>
+              <div class="s_f_disk_row clearfix">
+                <label class="s_f_disk_label_right">
                   <p class="main_text">ЕТ</p>
                   <p class="other_text">(вылет диска):</p>
-                </p>
-                              </label>
+                </label>
                 <select class="form_rows" name="disk_outlet">
                   <option value="12">12</option>
                   <option value="13">13</option>
@@ -285,19 +308,22 @@
                   <option value="15">15</option>
                   <option value="16">16</option>
                 </select>
-
-            </div>
-            </div>
-            <input type="submit" value="поиск...">
+              </div>
+            </fieldset>
+          </div>
+          <!-- </div> -->
+          <!-- </div> -->
+          <input class="button_to_link" type="submit" value="поиск...">
+        </div>
       </form>
     </section>
     <!-- Main content aside with product catalog + results of filtering + aside with brands catalog -->
-    <main role="main">
+    <main class="clearfix" role="main">
       <!-- sidebar with product catalog sorted by type -->
       <aside class="product_catalog">
-        <header class="aside_header"><span>КАТАЛОГ ПРОДУКЦИИ</span></header>
+        <header class="aside_header"><img src="img/chart_icon.png" alt=""><span>КАТАЛОГ ПРОДУКЦИИ:</span></header>
         <ul>
-          <li>ШИНЫ
+          <li><span class="aside_menu_item"><img src="img/tires_icon.png" alt="">ШИНЫ</span>
             <ul>
               <li><a href="#">Наименование 1</a></li>
               <li><a href="#">Наименование 2</a></li>
@@ -305,7 +331,7 @@
               <li><a href="#">Наименование 4</a></li>
             </ul>
           </li>
-          <li>ДИСКИ
+          <li><span class="aside_menu_item"><img src="img/tires_icon.png" alt="">ДИСКИ</span>
             <ul>
               <li><a href="#">Наименование 1</a></li>
               <li><a href="#">Наименование 2</a></li>
@@ -313,7 +339,7 @@
               <li><a href="#">Наименование 4</a></li>
             </ul>
           </li>
-          <li>БОЛТЫ
+          <li><span class="aside_menu_item"><img src="img/tires_icon.png" alt="">БОЛТЫ</span>
             <ul>
               <li><a href="#">Наименование 1</a></li>
               <li><a href="#">Наименование 2</a></li>
@@ -324,13 +350,13 @@
         </ul>
       </aside>
       <!-- section with products -->
-      <section>
+      <section class="product_table">
         <ul>
           <li class="product_item">
             <a href="#">
               <p class="product_name">Goodyear</p>
               <p class="product_model">Ultra Grip Extreme</p>
-              <img src="img/goodyear.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/goodyear.png" alt="" class="product_image"></div>
               <p class="product_price">90.00</p>
             </a>
           </li>
@@ -338,7 +364,7 @@
             <a href="#">
               <p class="product_name">Nokian</p>
               <p class="product_model">Hakkapeliita R</p>
-              <img src="img/nokian.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/nokian.png" alt="" class="product_image"></div>
               <p class="product_price">115.00</p>
             </a>
           </li>
@@ -346,7 +372,7 @@
             <a href="#">
               <p class="product_name">Hankook</p>
               <p class="product_model">K 708 155/65 R14</p>
-              <img src="img/hankook.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/hankook.png" alt="" class="product_image"></div>
               <p class="product_price">393.00</p>
             </a>
           </li>
@@ -354,7 +380,7 @@
             <a href="#">
               <p class="product_name">Goodyear</p>
               <p class="product_model">Ultra Grip Extreme</p>
-              <img src="img/goodyear.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/goodyear.png" alt="" class="product_image"></div>
               <p class="product_price">90.00</p>
             </a>
           </li>
@@ -362,7 +388,7 @@
             <a href="#">
               <p class="product_name">Nokian</p>
               <p class="product_model">Hakkapeliita R</p>
-              <img src="img/nokian.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/nokian.png" alt="" class="product_image"></div>
               <p class="product_price">115.00</p>
             </a>
           </li>
@@ -370,7 +396,7 @@
             <a href="#">
               <p class="product_name">Hankook</p>
               <p class="product_model">K 708 155/65 R14</p>
-              <img src="img/hankook.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/hankook.png" alt="" class="product_image"></div>
               <p class="product_price">393.00</p>
             </a>
           </li>
@@ -378,7 +404,7 @@
             <a href="#">
               <p class="product_name">Goodyear</p>
               <p class="product_model">Ultra Grip Extreme</p>
-              <img src="img/goodyear.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/goodyear.png" alt="" class="product_image"></div>
               <p class="product_price">90.00</p>
             </a>
           </li>
@@ -386,7 +412,7 @@
             <a href="#">
               <p class="product_name">Nokian</p>
               <p class="product_model">Hakkapeliita R</p>
-              <img src="img/nokian.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/nokian.png" alt="" class="product_image"></div>
               <p class="product_price">115.00</p>
             </a>
           </li>
@@ -394,51 +420,57 @@
             <a href="#">
               <p class="product_name">Hankook</p>
               <p class="product_model">K 708 155/65 R14</p>
-              <img src="img/hankook.png" alt="" class="product_image">
+              <div class="product_cell"><img src="img/hankook.png" alt="" class="product_image"></div>
               <p class="product_price">393.00</p>
             </a>
           </li>
+
+
+
+
+
+
+
         </ul>
       </section>
       <!-- aside searching form by brandname -->
       <aside class="search_form_brandname">
         <form class="" action="index.html" method="post">
-          <p class="search_form_name">БРЕНДЫ:
-            <p>
+          <p class="search_form_brandname_header"><img src="img/chart_icon.png" alt="">БРЕНДЫ:</p>
               <fieldset>
-                <legend>ШИНЫ</legend>
-                <label>
+                <legend class="search_form_brandname_header_item"><img src="img/tires_icon.png" alt="">ШИНЫ</legend>
+                <label class="aside_check_item">
                   <input type="checkbox" name="tire_brand">Бренд 1</label>
-                <label>
+                <label class="aside_check_item">
                   <input type="checkbox" name="tire_brand">Бренд 2</label>
-                <label>
+                <label class="aside_check_item">
                   <input type="checkbox" name="tire_brand">Бренд 3</label>
               </fieldset>
               <fieldset>
-                <legend>ДИСКИ</legend>
-                <label>
+                <legend class="search_form_brandname_header_item"><img src="img/tires_icon.png" alt="">ДИСКИ</legend>
+                <label class="aside_check_item">
                   <input type="checkbox" name="disk_brand">Бренд 1</label>
-                <label>
+                <label class="aside_check_item">
                   <input type="checkbox" name="disk_brand">Бренд 2</label>
-                <label>
+                <label class="aside_check_item">
                   <input type="checkbox" name="disk_brand">Бренд 3</label>
               </fieldset>
-              <input type="submit" value="ВЫБРАТЬ">
+              <input class="aside_brand_button" type="submit" value="ВЫБРАТЬ">
         </form>
       </aside>
     </main>
     <!-- tire manufactures list -->
-    <figure>
+    <figure class="tire_brand_list">
       <img src="img/tire_lables_chart.png" alt="" />
     </figure>
     <!-- footer -->
     <footer>
       <nav>
         <ul>
-          <li><a href="#">О компании</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Статьи</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="footer_menu_item"><a href="#">О компании</a></li>
+          <li class="footer_menu_item"><a href="#">Доставка</a></li>
+          <li class="footer_menu_item"><a href="#">Статьи</a></li>
+          <li class="footer_menu_item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
       <span class="copyright">Создание сайта &copy; Global Vision</span>
