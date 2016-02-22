@@ -1,32 +1,33 @@
 .wrapper {
   width: 912px;
   margin: 0 auto;
-  padding: 16px 44px 0 44px;
-  /*background-color: red;*/
+  padding: 21px 44px 0 44px;
   font-family: Arial, sans-serif;
 }
-
 /*header*/
-
 header {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .contact-tel{
   display: inline-block;
   font-size: 18px;
   color: #5e696d;
+  margin-left: 8px;
+  margin-right: 20px;
 }
 .contact-tel img{
   float: left;
+  margin-right: 7px;
 }
-
+.contact-tel>span{
+  /*font-stretch: expanded;;*/
+}
 /*login form*/
-
 .login {
   -webkit-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
 -moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
 box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
-  margin-right: 17px;
+  margin-right: 12px;
   border-radius: 4px;
   display: inline-block;
   width: 495px;
@@ -37,7 +38,8 @@ background: -moz-linear-gradient(top,  rgba(32,105,136,1) 0%, rgba(17,65,101,1) 
 background: -webkit-linear-gradient(top,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
 background: linear-gradient(to bottom,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#0c3256',GradientType=0 );
-
+  position: relative;
+  top: -4px;
   /*background-color: green;*/
 }
 .login img{
@@ -52,6 +54,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   /*clear: both;*/
   /*margin: 1px;*/
 }
+
 .login_form_header {
   display: inline-block;
 }
@@ -62,7 +65,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   padding: 0 4px;
   width: 104px;
   margin-right: 5px;
-
   /*background-color: brown;*/
 }
 .login_form_header input[type="submit"] {
@@ -77,12 +79,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   font-size: 11px;
   color: white;
 }
-.a_restore_password{
+.a_restore_password {
   margin-left: 20px;
   font-size: 11px;
   color: #bfbfbf;
 }
-
 /*main links*/
 
 .main_links {
@@ -94,70 +95,75 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   width: 77px;
   height: 22px;
   border-radius: 22px;
+  top:-6px;
+  position:relative;
   /*background-color: lime;*/
 }
 .main_links a{
   padding: 0 2px;
 }
-
 /*big logo*/
-
 .big_logo {
   display: block;
   margin: 0 auto 6px auto;
 }
-
 /*main menu*/
-
 .main_menu_nav {
   -webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
   border-radius: 5px;
   border: 1px solid #0d1642;
-  padding-left: 125px;
+  margin-bottom: 9px;
   padding-right: 13px;
-  margin-bottom: 12px;
   height: 35px;
   line-height: 35px;
-  background: rgb(87,96,104);
-background: -moz-linear-gradient(top,  rgba(87,96,104,1) 0%, rgba(43,47,52,1) 13%, rgba(0,0,0,1) 100%);
-background: -webkit-linear-gradient(top,  rgba(87,96,104,1) 0%,rgba(43,47,52,1) 13%,rgba(0,0,0,1) 100%);
-background: linear-gradient(to bottom,  rgba(87,96,104,1) 0%,rgba(43,47,52,1) 13%,rgba(0,0,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#576068', endColorstr='#000000',GradientType=0 );
-
-  /*background-color: purple;*/
+  background: linear-gradient(to bottom,  rgba(87,96,104,1) 0%,rgba(43,47,52,1) 13%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#576068', endColorstr='#000000',GradientType=0 );
+  padding-left: 125px;
 }
 .main_menu, .main_menu li {
   float: left;
 }
 .main_menu li{
-  margin-top: 4px;
   line-height: 27px;
   /*background-color: yellow;*/
   padding: 0 15px 0 15px;
-
+  margin-top: 2px;
+  line-height: 27px;
 }
 .main_menu li a{
   text-decoration: none;
   font-size: 14px;
   color: #b1bcc0;
-
 }
 .cart {
   float: right;
 }
-.menu_text_price{
-  /*line-height: 27px;*/
+.menu_text_price {
   font-size: 11px;
   color: #929b9f;
 }
-.menu_price{
+.price_block{
+  clear: left;
+  margin-top: -9px;
+  /*line-height: 37px;*/
+  vertical-align: middle;
+  /*margin-bottom: 10px;*/
+  /*line-height: 37px;*/
+  display: inline-block;
+  /*margin-bottom: 10px;*/
+  /*line-height: 37px;*/
+  position: relative;
+  /*position: absolute;*/
+}
+.menu_price {
+  margin-right: 10px;
   font-size: 12px;
   color: #0d5a8f;
+  text-align: left;
 }
 /*SEARCH FORMS*/
-
 .search-forms {
   padding: 0 5px;
   text-align: justify;
@@ -210,12 +216,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#576068', end
   color: #154467;
   font-size: 14px;
   position: absolute;
-  /*bottom: 10;*/
-  /*right: 18;*/
 }
-
 /*search form by auto*/
-
 .s_f_auto_label {
   width: 75px;
   line-height: 8px;
@@ -252,15 +254,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#576068', end
 }
 .search_by_auto select {
   display: block;
-  /*border: none;*/
   font-size: 11px;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
--moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
+  -moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
+  box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 }
-
 /*search form by tires*/
-
 .search_tires {
   position: relative;
   vertical-align: top;
@@ -310,9 +309,7 @@ box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 .s_f_tire_checkbox_block {
   display: inline-block;
 }
-
 /*search form by disk*/
-
 .search_disk {
   position: relative;
   vertical-align: top;
@@ -350,18 +347,17 @@ box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 .s_f_disk_row {
   min-height: 21px;
 }
-
 /*ASIDE PRODUCT CATALOG*/
-
 .product_catalog {
   display: inline-block;
   vertical-align: top;
-  /*float: left;*/
   width: 180px;
+  margin-right: 10px;
 }
 .aside_header {
+  margin-top: 2px;
+  margin-bottom: 13px;
   width: 178px;
-  /*height: 24px;*/
   border: 1px solid #79878d;
   border-radius: 25px;
   height: 25px;
@@ -369,8 +365,8 @@ box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   color: #114165;
   line-height: 25px;
   -webkit-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
--moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
+  box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
 }
 .aside_header img {
   float: left;
@@ -391,22 +387,21 @@ box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
   margin: 2px;
 }
 .product_catalog a {
-  line-height: 17px;
+  line-height: 25px;
   text-decoration: none;
   margin-left: 35px;
   font-size: 13px;
   color: #465961;
 }
 .product_catalog a:before {
-  content: "\25cb  ";
+  content: "\25cb";
+  display: inline-block;
+  width: 15px;
   color: #465961;
 }
-
 /*PRODUCT TABLE*/
-
 .product_table {
   border-radius: 3px;
-
   vertical-align: top;
   padding: 0 29px 0 22px;
   text-align: justify;
@@ -428,24 +423,22 @@ box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
   text-decoration: none;
 }
 .product_table li {
-  margin: 16px 0 12px 0;
+  margin: 15px 0 10px 0;
   text-align: center;
   display: inline-block;
 }
 .product_cell {
-  /*vertical-align: middle;*/
-  margin: 3px 0 5px 0;
+  margin: 0 0 5px 0;
   text-align: center;
   height: 127px;
   width: 138px;
   border: 1px solid #a4aeb1;
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: white;
 }
 .product_cell img{
   margin-top: 4px;
 }
-
 .product_name {
   color: #206988;
   font-size: 15px;
@@ -466,55 +459,65 @@ box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
   font-size: 12px;
 }
 /*ASIDE SEARCH BRAND*/
-.search_form_brandname{
-  /*float: right;*/
+.search_form_brandname {
   display: inline-block;
   vertical-align: top;
   width: 182px;
 }
 .search_form_brandname input[type="checkbox"]{
+  margin: 5px 11px 0 0;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 -moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 }
-.search_form_brandname_header{
+.search_form_brandname_header {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 17px;
   width: 180px;
   height: 25px;
+  line-height: 25px;
   border: 1px solid #79878d;
   color: #0c3256;
   font-size: 14px;
   line-height: 25px;
   border-radius: 25px;
   -webkit-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
--moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
+  box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
 }
 .search_form_brandname_header img{
   float: left;
   margin: 1px;
 }
-.search_form_brandname_header_item{
+.search_form_brandname_header_item {
+  line-height: 26px;
   margin-left: 15px;
-  /*display: block;*/
   font-size: 14px;
   color: #0c3256;
   width: 134px;
   height: 26px;
-  line-height: 26px;
   border-radius: 26px;
   border: 1px solid #79878d;
 }
 .search_form_brandname_header_item img{
   float: left;
   margin: 1px;
-}
-.aside_check_item{
+    }
+.aside_check_item {
+  line-height: 25px;
   display: block;
   margin-left: 25px;
   font-size: 13px;
   color: #465961;
 }
-.aside_brand_button{
+.aside_check_item:last-child{
+  margin-bottom: 7px;
+}
+.aside_brand_button {
+  margin-top: 8px;
   height: 26px;
   width: 80px;
   border: none;
@@ -523,35 +526,28 @@ box-shadow: 3px 3px 3px 0px rgba(150,150,150,0.75);
   color: #e5e9ea;
   cursor: pointer;
   margin-left: 25px;
-  background: rgb(32,105,136);
-background: -moz-linear-gradient(top,  rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
-background: -webkit-linear-gradient(top,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
-background: linear-gradient(to bottom,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#0c3256',GradientType=0 );
-
+  background: linear-gradient(to bottom,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#0c3256',GradientType=0 );
 }
 /*tire_brand_list*/
-.tire_brand_list{
+.tire_brand_list {
   display: block;
   margin: 38px 0 25px 0;
-  /*margin: 0 auto;*/
   text-align: center;
 }
 /*FOOTER*/
-footer{
-  padding:18px 0 50px 0;
+footer {
+  padding: 8px 0 50px 0;
   text-align: center;
   background-color: #213a4d;
 }
 
-.footer_menu_item{
-  /*line-height: 22px*/
+.footer_menu_item {
   display: inline-block;
-  /*float: left;*/
 }
 .footer_menu_item:first-child,
 .footer_menu_item:nth-child(2),
-.footer_menu_item:nth-child(3){
+.footer_menu_item:nth-child(3) {
   border-right: 1px solid #bec6c9;
 }
 .footer_menu_item a{
@@ -561,21 +557,15 @@ footer{
   font-size: 12px;
   color:#bec6c9;
 }
-footer nav ul{
-  /*height: 22px;*/
-  /*line-height: 22px;*/
-  /*margin-bottom: 18px;*/
-}
 /*clear flow*/
-.copyright{
-  font-size: 10px;
-  color: #7f4740;
-  display: block;
-  margin-top: 18px;
-  /*padding-bottom: 50px;*/
-}
 .clearfix:after {
   display: block;
   content: "";
   clear: both;
+}
+.copyright {
+  font-size: 10px;
+  color: #7f4740;
+  display: block;
+  margin-top: 15px;
 }
