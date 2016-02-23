@@ -56,22 +56,22 @@
       <!-- Search by auto form 1/3 -->
       <form class="search_by_auto" action="index.html" method="post">
         <p class="search_form_name float_auto_name">Поиск по автомобилю</p>
-        <div class="s_f_auto_container">
-          <fieldset>
+        <div class="s_f_auto_container clearfix">
+          <fieldset class="s_f_auto_left">
             <legend>Диски:</legend>
             <!-- <div class="labels_wrapper"> -->
             <!-- <div class="labels"> -->
             <div class="s_f_auto_row clearfix">
-              <label class="s_f_auto_label" for="mark-auto">
+              <label class="s_f_auto_label clearfix" for="mark-auto">
                 <span class="main_text">Марка </span><span class="other_text">авто:</span>
               </label>
               <select id="mark-auto">
-                <option value="0"></option>
-                <option value="1">Пункт1</option>
-                <option value="2">Пункт2</option>
-                <option value="3">Пункт3</option>
-                <option value="4">Пункт4</option>
-                <option value="5">Пункт5</option>
+                <!-- <option value="0"></option> -->
+                <option value="1">Марка1</option>
+                <option value="2">Марка2</option>
+                <option value="3">Марка3</option>
+                <option value="4">Марка4</option>
+                <option value="5">Марка5</option>
               </select>
             </div>
             <div class="s_f_auto_row clearfix">
@@ -79,25 +79,25 @@
                 <span class="main_text">Модель </span><span class="other_text">автомобиля:</span>
               </label>
               <select id="model">
-                <option value="0"></option>
-                <option value="1">Пункт1</option>
-                <option value="2">Пункт2</option>
-                <option value="3">Пункт3</option>
-                <option value="4">Пункт4</option>
-                <option value="5">Пункт5</option>
+                <!-- <option value="0"></option> -->
+                <option value="1">Модель1</option>
+                <option value="2">Модель2</option>
+                <option value="3">Модель3</option>
+                <option value="4">Модель4</option>
+                <option value="5">Модель5</option>
               </select>
             </div>
             <div class="s_f_auto_row clearfix">
               <label class="s_f_auto_label" for="release_year">
                 <span class="main_text">Год выпуска </span><span class="other_text">автомобиля:</span>
               </label>
-              <select id="release_year">
-                <option value="0"></option>
-                <option value="1">Пункт1</option>
-                <option value="2">Пункт2</option>
-                <option value="3">Пункт3</option>
-                <option value="4">Пункт4</option>
-                <option value="5">Пункт5</option>
+              <select class="year_select" id="release_year">
+                <!-- <option value="0"></option> -->
+                <option value="1">2001</option>
+                <option value="2">2002</option>
+                <option value="3">2003</option>
+                <option value="4">2004</option>
+                <option value="5">2005</option>
               </select>
             </div>
             <div class="s_f_auto_row clearfix">
@@ -105,12 +105,12 @@
                 <span class="main_text">Комплектация:</span>
               </label>
               <select id="complect">
-                <option value="0"></option>
-                <option value="1">Пункт1</option>
-                <option value="2">Пункт2</option>
-                <option value="3">Пункт3</option>
-                <option value="4">Пункт4</option>
-                <option value="5">Пункт5</option>
+                <!-- <option value="0"></option> -->
+                <option value="1">Комплект1</option>
+                <option value="2">Комплект2</option>
+                <option value="3">Комплект3</option>
+                <option value="4">Комплект4</option>
+                <option value="5">Комплект5</option>
               </select>
             </div>
             <!-- </div> -->
@@ -119,49 +119,67 @@
             <!-- </div> -->
           </fieldset>
           <!-- Another row in form -->
-          <!-- <fieldset>
-          <legend>Шины:</legend>
-          <label><span class="main_text">Марка </span><span class="other_text">авто:</span>
-            <select name="mark-auto">
-              <option value="0"></option>
-              <option value="1">Пункт1</option>
-              <option value="2">Пункт2</option>
-              <option value="3">Пункт3</option>
-              <option value="4">Пункт4</option>
-              <option value="5">Пункт5</option>
-          </label>
-          </select>
-          <label><span class="main_text">Модель </span><span class="other_text">автомобиля:</span>
-            <select name="model">
-              <option value="0"></option>
-              <option value="1">Пункт1</option>
-              <option value="2">Пункт2</option>
-              <option value="3">Пункт3</option>
-              <option value="4">Пункт4</option>
-              <option value="5">Пункт5</option>
-            </select>
-          </label>
-          <label><span class="main_text">Год выпуска </span><span class="other_text">автомобиля:</span>
-            <select name="release_year">
-              <option value="0"></option>
-              <option value="1">Пункт1</option>
-              <option value="2">Пункт2</option>
-              <option value="3">Пункт3</option>
-              <option value="4">Пункт4</option>
-              <option value="5">Пункт5</option>
-            </select>
-          </label>
-          <label><span class="main_text">Комплектация:</span>
-            <select name="complect">
-              <option value="0"></option>
-              <option value="1">Пункт1</option>
-              <option value="2">Пункт2</option>
-              <option value="3">Пункт3</option>
-              <option value="4">Пункт4</option>
-              <option value="5">Пункт5</option>
-            </select>
-          </label>
-        </fieldset> -->
+          <fieldset class="s_f_auto_right">
+            <legend>Шины:</legend>
+            <!-- <div class="labels_wrapper"> -->
+            <!-- <div class="labels"> -->
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label clearfix" for="mark-auto">
+                <span class="main_text">Марка </span><span class="other_text">авто:</span>
+              </label>
+              <select id="mark-auto">
+                <!-- <option value="0"></option> -->
+                <option value="1">Марка1</option>
+                <option value="2">Марка2</option>
+                <option value="3">Марка3</option>
+                <option value="4">Марка4</option>
+                <option value="5">Марка5</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="model">
+                <span class="main_text">Модель </span><span class="other_text">автомобиля:</span>
+              </label>
+              <select id="model">
+                <!-- <option value="0"></option> -->
+                <option value="1">Модель1</option>
+                <option value="2">Модель2</option>
+                <option value="3">Модель3</option>
+                <option value="4">Модель4</option>
+                <option value="5">Модель5</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="release_year">
+                <span class="main_text">Год выпуска </span><span class="other_text">автомобиля:</span>
+              </label>
+              <select class="year_select" id="release_year">
+                <!-- <option value="0"></option> -->
+                <option value="1">2001</option>
+                <option value="2">2002</option>
+                <option value="3">2003</option>
+                <option value="4">2004</option>
+                <option value="5">2005</option>
+              </select>
+            </div>
+            <div class="s_f_auto_row clearfix">
+              <label class="s_f_auto_label" for="complect">
+                <span class="main_text">Комплектация:</span>
+              </label>
+              <select id="complect">
+                <!-- <option value="0"></option> -->
+                <option value="1">Комплект1</option>
+                <option value="2">Комплект2</option>
+                <option value="3">Комплект3</option>
+                <option value="4">Комплект4</option>
+                <option value="5">Комплект5</option>
+              </select>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="selects"> -->
+            <!-- </div> -->
+          </fieldset>
           <input class="button_to_link" type="submit" value="поиск...">
         </div>
       </form>
@@ -196,10 +214,10 @@
               </div>
             </div>
             <div class="s_f_tire_row clearfix">
-              <label class="s_f_tire_label" for="tire_radius">
+              <label class="s_f_tire_label label_to_right" for="tire_radius">
                 <span class="main_text">R</span>
               </label>
-              <select class="form_rows" name="tire_radius">
+              <select name="tire_radius">
                 <option value="12">12</option>
                 <option value="13">13</option>
                 <option value="14">14</option>
@@ -208,7 +226,7 @@
               </select>
             </div>
             <div class="s_f_tire_row clearfix">
-              <label class="s_f_tire_label clearfix" for="tire_season">
+              <label class="s_f_tire_label_season clearfix" for="tire_season">
                 <span class="main_text">Сезон:</span>
               </label>
               <div class="s_f_tire_checkbox_block clearfix">
@@ -236,7 +254,7 @@
         <div class="s_f_disk_container">
           <div class="clearfix">
             <fieldset class="s_f_disk_field_left">
-              <p class="search_form_name">ПОИСК ДИСКОВ</p>
+              <p class="search_form_name s_f_disk_form_name">ПОИСК ДИСКОВ</p>
               <!-- <div class="labels_wrapper_3"> -->
 
               <div class="s_f_disk_row clearfix">
@@ -253,9 +271,9 @@
               </div>
               <div class="s_f_disk_row clearfix">
                 <label class="s_f_disk_label_left">
-                  <span class="main_text">Количество </span><span class="other_text">крепёжных отверстий:</span>
+                  <span class="main_text">Количество </span><span class="other_text s_f_disk_text">крепёжных отверстий:</span>
                 </label>
-                <select name="number_of_holes">
+                <select class="s_f_disk_select_hole" name="number_of_holes">
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
@@ -263,7 +281,7 @@
               </div>
               <div class="s_f_disk_row clearfix">
                 <label class="s_f_disk_label_left">
-                  <span class="main_text">Диаметр </span><span class="other_text">расположения крепёжных отверстий:</span>
+                  <span class="main_text">Диаметр </span><span class="other_text s_f_disk_text">расположения крепёжных отверстий:</span>
                 </label>
                 <select name="hole_diameter">
                   <option value="12">12</option>
@@ -290,7 +308,7 @@
                   <p class="main_text">ДЦО</p>
                   <p class="other_text">(диаметр центрального отверстия):</p>
                 </label>
-                <select class="form_rows" name="central_hole_diameter">
+                <select class="s_f_disk_right_select" name="central_hole_diameter">
                   <option value="12">12</option>
                   <option value="13">13</option>
                   <option value="14">14</option>
@@ -303,7 +321,7 @@
                   <p class="main_text">ЕТ</p>
                   <p class="other_text">(вылет диска):</p>
                 </label>
-                <select class="form_rows" name="disk_outlet">
+                <select class="s_f_disk_right_select" name="disk_outlet">
                   <option value="12">12</option>
                   <option value="13">13</option>
                   <option value="14">14</option>

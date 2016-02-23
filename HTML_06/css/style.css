@@ -179,10 +179,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   margin: 6px 13px 8px 18px;
 }
 .s_f_tire_container {
-  margin: 6px 14px 9px 13px;
+  margin: 3px 0 9px 14px;
 }
 .s_f_disk_container {
-  margin: 6px 18px 8px 15px;
+  margin: 2px 18px 8px 15px;
 }
 .main_text {
   font-size: 10px;
@@ -194,6 +194,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
 }
 .other_text_2 {
   font-size: 11px;
+  /*line-height: 11px;*/
 }
 .search-forms legend {
   font-size: 10px;
@@ -218,18 +219,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   position: absolute;
 }
 /*search form by auto*/
-.s_f_auto_label {
-  width: 75px;
-  line-height: 8px;
+.s_f_auto_left{
   float: left;
+  padding: 4px 0 0 0;
+}
+.s_f_auto_label {
+  display: inline-block;
+  width: 70px;
+  vertical-align: middle;
+  line-height: 7px;
   text-align: left;
 }
 .s_f_auto_row {
+  display: inline-block;
+  vertical-align: middle;
   min-height: 21px;
 }
 .float_auto_name {
+  top:2px;
+  transform: scaleX(1.15);
+    -webkit-transform: scaleX(1.15);
   position: absolute;
-  right: 130px;
+  right: 142px;
 }
 .search_by_auto fieldset {
   width: 50%;
@@ -253,11 +264,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   margin-bottom: 10px;
 }
 .search_by_auto select {
-  display: block;
+  display: inline-block;
+  width: 102px;
   font-size: 11px;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   -moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
+}
+.search_by_auto .year_select{
+  width: 58px;
+}
+.s_f_auto_right{
+  float: left;
+  padding: 4px 0 0 0;
+}
+.s_f_auto_right legend{
+  text-align: right;
+}
+.s_f_auto_right .s_f_auto_row{
+  margin-left: 12px;
 }
 /*search form by tires*/
 .search_tires {
@@ -278,18 +303,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
   margin-right: 18px;
   margin-bottom: 10px;
 }
+.search_tires fieldset{
+  padding-top: 5px;
+}
 .s_f_tire_label {
-  width: 45px;
+  /*text-align: left;*/
+  display: inline-block;
+  width: 41px;
+  line-height: 8px;
+}
+.label_to_right{
+text-align: right;
+position: relative;
+right: 2px;
+/*margin-right: -5px;*/
+}
+.s_f_tire_label_season{
+  width: 40px;
   line-height: 8px;
   float: left;
 }
+/*.label_to_top{
+  position: relative;
+  left: 0;
+}*/
 .s_f_tire_row {
-  min-height: 21px;
+  display: block;
+  vertical-align: middle;
+  min-height: 24px;
 }
 .s_f_tire_inputs {
-  display: block;
+  display: inline-block;
 }
 .search_tires select {
+  width: 50px;;
+  display: inline-block;
   /*border: none;*/
   font-size: 11px;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
@@ -297,16 +345,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', end
 box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 }
 .s_f_tire_checkbox {
-  float: left;
-  clear: both;
+  vertical-align: middle;
+  display: block;
+  height: 13px;
+  /*float: left;*/
+  /*clear: both;*/
 }
 .search_tires input[type="checkbox"]{
+  vertical-align: middle;
+  /*float: left;*/
+  display: inline-block;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 -moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
-  margin: 0;
+  /*margin: 5px 0 -5px 0;*/
+  /*bottom: -2px;*/
+  transform: scale(0.8);
+    -webkit-transform: scale(0.8);
 }
 .s_f_tire_checkbox_block {
+  /*vertical-align: middle;*/
   display: inline-block;
 }
 /*search form by disk*/
@@ -322,6 +380,14 @@ box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.75);
   box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.75);
 }
+.s_f_disk_form_name{
+position: relative;
+font-family: "Arial Black";
+margin-left: -4px;
+/*letter-spacing: -1px;*/
+font-size: 11px;
+margin-bottom: 5px;
+}
 .search_disk .button_to_link{
   bottom:0;
   right:0;
@@ -329,23 +395,43 @@ box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   margin-bottom: 10px;
 }
 .s_f_disk_label_left {
-  width: 90px;
+  width: 84px;
   line-height: 8px;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  /*float: left;*/
+}
+.s_f_disk_text{
+  font-size: 10px;
 }
 .search_disk select {
+  width: 60px;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 -moz-box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
 box-shadow: inset 2px 2px 2px 0px rgba(150,150,150,0.75);
   /*border: none;*/
   font-size: 11px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.s_f_disk_row .s_f_disk_select_hole{
+  vertical-align: bottom;
+  width: 50px;
 }
 .s_f_disk_field_left {
-  width: 148px;
+  width: 158px;
   float: left;
+  border-right: 1px solid black;
+  margin-right: 10px;
 }
 .s_f_disk_row {
-  min-height: 21px;
+  /*min-height: 21px;*/
+  display: inline-block;
+  vertical-align: middle;
+}
+.s_f_disk_right_select{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 /*ASIDE PRODUCT CATALOG*/
 .product_catalog {
