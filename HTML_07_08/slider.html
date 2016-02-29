@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <article id=slider>
+      <input type=radio name=slider id=slide1>
+      <input checked type=radio name=slider id=slide2>
+      <input type=radio name=slider id=slide3>
+      <input type=radio name=slider id=slide4>
+      <input type=radio name=slider id=slide5>
+
+      <div id=slides>
+        <div id=overflow>
+          <div class=inner>
+            <article>Слайд1</article>
+            <article>
+              <div class="slide__text__wrapper">
+                <div class="slide__text">
+                  <p class="slide__text__head">Lorem Ipsum Dolor</p>
+                  <p class="slide__text__lead">IT WILL MAKE ALL YOUR DREAMS COME TRUE</p>
+                  <p class="slide__text__main">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis,
+                    euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
+                </div>
+              </div>
+              <div class="slide__image">
+                <img src="img/iphone_blured_img.png" alt="">
+              </div>
+              <div class="slide__pop-up">
+                <img src="img/iphone_img-big.png" alt="">
+                <div class="button__wrapper">
+                  <div class="button">
+                    <img class="button__back" src="img/button-play__back.png" alt="">
+                    <div class="button__front">
+                      <a href="#">
+                        <img src="img/button-play__front.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article>Слайд3</article>
+            <article>Слайд4</article>
+            <article>Слайд5</article>
+          </div>
+        </div>
+      </div>
+      <div id=controls>
+        <label for=slide1></label>
+        <label for=slide2></label>
+        <label for=slide3></label>
+        <label for=slide4></label>
+        <label for=slide5></label>
+      </div>
+      <div id=active>
+        <label for=slide1></label>
+        <label for=slide2></label>
+        <label for=slide3></label>
+        <label for=slide4></label>
+        <label for=slide5></label>
+      </div>
+    </article>
+  </body>
+</html>
