@@ -1,0 +1,70 @@
+body {
+  /*width: 960px;*/
+}
+#mini-slider input {
+  display: none;
+}
+#mini-slider {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+#mini-slides {
+  width: 100%;
+  margin: 0 auto;
+}
+#mini-slider .inner {
+  width: 400%;
+}
+#mini-slider .inner article {
+  width: 25%;
+  height: 293px;
+  float: left;
+}
+#mini-overflow {
+  width: 100%;
+  overflow: hidden;
+}
+#mini-slider .inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#mini-slide1:checked ~ #mini-slides .inner {
+  margin-left: 0;
+}
+#mini-slide2:checked ~ #mini-slides .inner {
+  margin-left: -100%;
+}
+#mini-slide3:checked ~ #mini-slides .inner {
+  margin-left: -200%;
+}
+#mini-slide4:checked ~ #mini-slides .inner {
+  margin-left: -300%;
+}
+#mini-active {
+  position: absolute;
+  right: 209px;
+  bottom: -20px;
+  text-align: center;
+}
+#mini-active label {
+  cursor: pointer;
+  border-radius: 100%;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: white;
+  box-shadow: 0 0 0 1px #e6e6e6;
+  box-sizing: border-box;
+}
+#mini-active label:hover {
+  border: 3px solid rgba(255, 255, 255, 1);
+  background-clip: content-box;
+}
+#mini-slide1:checked ~ #mini-active label:nth-child(1), #mini-slide2:checked ~ #mini-active label:nth-child(2), #mini-slide3:checked ~ #mini-active label:nth-child(3), #mini-slide4:checked ~ #mini-active label:nth-child(4) {
+  background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px #e6e6e6;
+  background-clip: content-box;
+}

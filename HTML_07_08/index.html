@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/mini-slider.css">
   </head>
 
   <body>
@@ -40,19 +42,75 @@
           </nav>
         </div>
         <div class="header__inner__middle">
-          <div class="slider">
+          <!-- <div class="slider"> -->
+            <article id=slider>
+              <input type=radio name=slider id=slide1>
+              <input checked type=radio name=slider id=slide2>
+              <input type=radio name=slider id=slide3>
+              <input type=radio name=slider id=slide4>
+              <!-- <input type=radio name=slider id=slide5> -->
 
+              <div id=slides>
+                <div id=overflow>
+                  <div class=inner>
+                    <article>Слайд1</article>
+                    <article>
+                      <div class="slide__text__wrapper">
+                        <div class="slide__text">
+                          <p class="slide__text__head">Lorem Ipsum Dolor</p>
+                          <p class="slide__text__lead">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
+                          <p class="slide__text__main">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc,
+                            imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
+                        </div>
+                      </div>
+                      <div class="slide__image">
+                        <img src="img/iphone_blured_img.png" alt="">
+                      </div>
+                      <div class="slide__pop-up">
+                        <img src="img/iphone_img-big.png" alt="">
+                        <div class="button__wrapper">
+                          <div class="button">
+                            <img class="button__back" src="img/button-play__back.png" alt="">
+                            <div class="button__front">
+                              <a href="#">
+                                <img src="img/button-play__front.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article>Слайд3</article>
+                    <article>Слайд4</article>
+                    <!-- <article>Слайд5</article> -->
+                  </div>
+                </div>
+              </div>
+              <div id=controls>
+                <label for=slide1></label>
+                <label for=slide2></label>
+                <label for=slide3></label>
+                <label for=slide4></label>
+                <!-- <label for=slide5></label> -->
+              </div>
+              <div id=active>
+                <label for=slide1></label>
+                <label for=slide2></label>
+                <label for=slide3></label>
+                <label for=slide4></label>
+                <!-- <label for=slide5></label> -->
+              </div>
+            </article>
 
-
-          </div>
+          <!-- </div> -->
         </div>
         <div class="header__inner__bottom">
-          <nav class="slider__nav"></nav>
+          <!-- <nav class="slider__nav"></nav> -->
         </div>
       </header>
     </div>
     <div class="about__container">
-      <aside class="about clearfix">
+      <aside class="about">
         <article class="about__article">
           <div class="about__article__box">
             <div class="about__article__content">
@@ -88,23 +146,62 @@
     <div class="main__container">
       <main class="main clearfix">
         <article class="testimonial__box">
-          <div class="testimonial">
+
+          <article id=mini-slider>
+            <input type=radio name=mini-slider id=mini-slide1>
+            <input checked type=radio name=mini-slider id=mini-slide2>
+            <input type=radio name=mini-slider id=mini-slide3>
+            <input type=radio name=mini-slider id=mini-slide4>
+            <div id=mini-slides>
+              <div id=mini-overflow>
+                <div class=inner>
+                  <article>Слайд1</article>
+                  <article>
+                    <div class="testimonial">
+                      <div class="testimonial__content">
+                        <img src="img/author-photo.png" alt="" class="article__author-photo">
+                        <p>
+                          <span class="article__title article__title--black">PINGBULLER</span>
+                          <span class="article__title article__title--pink">
+                            STARTS HERE</span>
+                        </p>
+                        <p class="article__text article__text--black">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna
+                          risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
+                      </div>
+                    </div>
+                  </article>
+                  <article>Слайд3</article>
+                  <article>Слайд4</article>
+                </div>
+              </div>
+            </div>
+            <div id=mini-active>
+              <label for=mini-slide1></label>
+              <label for=mini-slide2></label>
+              <label for=mini-slide3></label>
+              <label for=mini-slide4></label>
+            </div>
+          </article>
+
+
+          <!-- <div class="testimonial">
             <div class="testimonial__content">
               <img src="img/author-photo.png" alt="" class="article__author-photo">
               <p>
-                <span class="article__title article__title--black">PINGBULLER</span>
-                <span class="article__title article__title--pink">
+                <span class="article__title article__title  black">PINGBULLER</span>
+                <span class="article__title article__title  pink">
                   STARTS HERE</span>
               </p>
-              <p class="article__text article__text--black">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna
+              <p class="article__text article__text  black">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna
                 risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
             </div>
-          </div>
+          </div> -->
+
         </article>
         <article class="from-the-blog">
           <div class="from-the-blog__content">
             <p>
-              <span class="article__title article__title--black">
+              <span class="article__title article__title--bloger">
                 RECENT UPDATES</span>
             </p>
             <div class="bloger-entry">
@@ -128,7 +225,7 @@
                 <p class="article__text article__title--black">Posted by Admin on March 13 2012 in Blog Updates</p>
               </div>
             </div>
-            <a href="#" class="article__link article__link--black">READ MORE HERE</a>
+            <a href="#" class="bloger__link">READ MORE HERE</a>
           </div>
         </article>
       </main>
@@ -158,7 +255,7 @@
       </div>
     </div>
     <div class="feed__container">
-      <aside class="feed clearfix">
+      <aside class="feed">
         <article class="feed__article">
           <div class="feed__article__content">
             <div class="about-us">
