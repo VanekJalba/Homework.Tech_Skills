@@ -1,0 +1,121 @@
+@media screen and (max-width: 768px) {
+  .menu{
+    text-align: justify;
+    width: 86%;
+    clear: both;
+    float: left;
+    margin-top: 31px;
+    margin-left: 11px;
+  }
+  .menu:after{
+    content: "";
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+    height: 0;
+  }
+  .menu__item{
+    text-align: justify;
+    display: inline-block;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header__inner__top{
+    height: 178px;
+    padding-top: 66px;
+  }
+  .header__logo{
+    margin-left: 18px;
+  }
+  .slide__text__wrapper{
+    vertical-align: top;
+    width: 37%;
+    margin-left: 6%;
+  }
+  .slide__text{
+    vertical-align: top;
+    margin-top: 99px;
+  }
+  .slide__text__head{
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .slide__text__lead{
+    letter-spacing: -1px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .slide__text__main{
+    font-size: 16px;
+    line-height: 27px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .header__inner__bottom{
+    height: 154px;
+  }
+  .slide__image{
+    margin-left: 16.5%;
+  }
+  .slide__pop-up{
+    right:3.8%;
+  }
+  #active{
+    right:128px;
+    bottom:-37px;
+  }
+  .article__title{
+    font-size: 24px;
+  }
+  .about__article{
+    width: 31%;
+  }
+  .testimonial{
+    margin-left: 43px;
+    width: 84%;
+  }
+  .testimonial__title{
+    display: block;
+    font-size: 25px;
+    letter-spacing: normal;
+    margin-bottom: 0;
+  }
+  .testimonial__title--pink{
+
+  }
+  .testimonial__text{
+    margin-top: 6px;
+    overflow: hidden;
+    height: 150px;
+  }
+  .from-the-blog__content{
+    margin-left: 40px;
+  }
+  .main__container{
+    padding-bottom: 73px;
+  }
+  .other-logos{
+    padding: 0;
+  }
+  .feed__article__title{
+    font-size: 26px;
+  }
+  .footer__container{
+    padding-top: 44px;
+    padding-bottom: 85px;
+  }
+  .footer__menu:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+.menu--footer{
+  /*clear: both;*/
+  width: 71%;;
+    margin-top: 0;
+  }
+  .footer__copyright{
+    margin-top: 19px;
+  }
+}

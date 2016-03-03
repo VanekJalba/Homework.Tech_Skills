@@ -43,9 +43,9 @@ body {
   margin-left: -300%;
 }
 #mini-active {
-  position: absolute;
-  right: 209px;
-  bottom: -20px;
+  /*position: absolute;*/
+  /*right: 209px;*/
+  /*bottom: -20px;*/
   text-align: center;
 }
 #mini-active label {
