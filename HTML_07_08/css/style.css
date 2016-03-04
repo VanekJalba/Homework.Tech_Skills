@@ -19,7 +19,7 @@
   font-weight: bold;
   font-style: normal;
 }
-body{
+body {
   min-width: 300px;
 }
 .header__container {
@@ -50,20 +50,15 @@ body{
   color: #553c61;
 }
 .menu {
-  /*position: relative;*/
-  /*display: inline-block;*/
   margin-top: 8px;
-  /*text-align: right;*/
   float: right;
 }
-.menu--compact{
+.menu--compact {
   display: none;
 }
 .menu__item {
-  /*display: inline-block;*/
   margin-left: 43px;
   float: left;
-  /*margin: 0 0 0 42px;*/
 }
 .menu__item__link {
   padding: 0 5px;
@@ -94,6 +89,7 @@ body{
   border-bottom: 1px solid #0d151b;
   border-top: 1px solid #33253a;
   height: 342px;
+  background-image: -webkit-linear-gradient(bottom, #322539 0%, #745083 100%);
   background-image: linear-gradient(to top, #322539 0%, #745083 100%);
 }
 .about {
@@ -117,7 +113,6 @@ body{
 .about__article__box {
   margin: 0 0 0 9px;
 }
-
 .about__article__content {
   position: relative;
   height: 194px;
@@ -142,8 +137,6 @@ body{
   background-position: -56px 0;
 }
 .article__title {
-  /*white-space: nowrap;*/
-  /*letter-spacing: 0.2px;*/
   display: inline-block;
   margin-bottom: 6px;
   text-shadow: 0.5px 0.9px 0 #0f1518;
@@ -261,6 +254,7 @@ body{
   color: #454545;
 }
 .bloger-entry__title {
+  white-space: nowrap;
   text-align: left;
   line-height: 24px;
   font-family: "Open Sans";
@@ -378,8 +372,6 @@ body{
   font-style: italic;
 }
 .feed__article__text {
-  /*overflow: hidden;*/
-  /*max-height: 166px;*/
   text-align: left;
   line-height: 24px;
   font-family: "Open Sans";
@@ -425,6 +417,3 @@ body{
   display: block;
   clear: both;
 }
-/*.copyright-text{*/
-  /*margin: 0;*/
-/*}*/
