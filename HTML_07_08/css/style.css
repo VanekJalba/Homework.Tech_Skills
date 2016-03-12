@@ -125,7 +125,7 @@ body {
   width: 27px;
   height: 25px;
   background-repeat: no-repeat;
-  background-image: url(../img/article_icons.png);
+  background-image: url(../img/article_icons.svg);
 }
 .article__icon--wrench {
   background-position: 0 0;
