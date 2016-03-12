@@ -223,10 +223,10 @@ body {
 }
 .bloger-entry__text {
   text-align: left;
-  line-height: 24px;
+  /*line-height: 24px;*/
   font-family: "Open Sans";
   font-size: 16px;
-  margin-bottom: 9px;
+  /*margin-bottom: 9px;*/
   text-shadow: 0.5px 0.9px 0 white;
   color: #454545;
 }
@@ -254,7 +254,7 @@ body {
   color: #454545;
 }
 .bloger-entry__title {
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   text-align: left;
   line-height: 24px;
   font-family: "Open Sans";
@@ -280,10 +280,10 @@ body {
 }
 .bloger-entry {
   overflow: hidden;
-  height: 50px;
+  height: 66px;
   position: relative;
   padding-left: 66px;
-  margin-bottom: 16px;
+  /*margin-bottom: 16px;*/
 }
 .bloger-photo {
   position: absolute;

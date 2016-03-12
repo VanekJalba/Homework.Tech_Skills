@@ -37,13 +37,15 @@ input {
   bottom:230px;
   position: relative;
   width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
 }
 #controls label {
   cursor: pointer;
 	display: none;
 	width: 22px;
 	height: 34px;
-	opacity: 0.3;
+	opacity: 0.5;
 }
 #controls label:hover{
   opacity: 1;
@@ -55,7 +57,7 @@ input {
 	background: url('../img/arrows.png') no-repeat;
   background-position: -23px;
 	float: right;
-	margin: 0 3% 0 0;
+	margin: 0 0.5% 0 0;
 	display: block;
 }
 #slide2:checked ~ #controls label:nth-child(1),
@@ -64,7 +66,7 @@ input {
 #slide1:checked ~ #controls label:nth-child(4) {
 	background: url('../img/arrows.png') no-repeat;
 	float: left;
-	margin: 0 0 0 3%;
+	margin: 0 0 0 0.5%;
 	display: block;
 }
 #active {
@@ -99,9 +101,10 @@ opacity: 1;
   background-clip:content-box;
 }
 .slide__text__wrapper{
-  width: 52%;
+  width: 54%;
   vertical-align: middle;
   display: inline-block;
+	margin-left: 4%;
 }
 .slide__text{
   width: 100%;
@@ -149,7 +152,7 @@ letter-spacing: -0.2px;
   vertical-align: middle;
 }
 .slide__image{
-  margin-left: 12.5%;
+  margin-left: 7.5%;
   display: inline-block;
   height: 100%;
 }

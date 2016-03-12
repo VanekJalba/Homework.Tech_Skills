@@ -90,6 +90,9 @@
   .from-the-blog__content {
     margin-left: 40px;
   }
+  .bloger-entry__title{
+    line-height: 16px;
+  }
   .main__container {
     padding-bottom: 73px;
   }
@@ -218,7 +221,10 @@
     margin-top: 49px;
   }
   .bloger-entry {
-    margin-right: 50px;
+    /*margin-right: 50px;*/
+  }
+  .bloger-entry__title{
+    line-height: 24px;
   }
   .bloger__link {
     right: 50px;
@@ -294,9 +300,18 @@
     text-align: center;
     display: block;
   }
+  .menu--compact>.menu__item>.menu__item__link{
+    height: 46px;
+  }
+  .submenu .menu__item__link{
+    height: 38px;
+  }
   .menu--compact .menu__item:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     background-color: rgba(36, 28, 42, 0.9);
+  }
+  .menu--compact .menu__item__link:hover {
+    /*border-bottom: 2px solid #edbfff;*/
   }
   .menu--compact>.menu__item {
     height: 48px;
@@ -307,9 +322,12 @@
     display: none;
     z-index: 999;
   }
+  .submenu__first-item{
+    border-bottom: 2px solid #edbfff;
+  }
   .submenu .menu__item {
     height: 42px;
-    line-height: 40px;
+    line-height: 42px;
     box-sizing: border-box;
     border-top: 1px solid #54405c;
   }
@@ -318,6 +336,9 @@
   }
   .slide__text__main {
     display: none;
+  }
+  .bloger-entry__title{
+    line-height: 16px;
   }
   .feed__container {
     height: auto;
@@ -377,12 +398,14 @@
     margin-right: 3px;
   }
   .bloger-entry__title {
-    white-space: nowrap;
-    width: 156px;
-    overflow: hidden;
+    font-size: 15px;
+    /*white-space: nowrap;*/
+    /*width: 156px;*/
+    /*overflow: hidden;*/
   }
   .bloger-entry__text {
-    white-space: nowrap;
+    font-size: 15px;
+    /*white-space: nowrap;*/
   }
   .bloger__link {
     right: 18px;
@@ -414,6 +437,7 @@
 }
 @media screen and (max-width: 320px) {
   .menu--compact {
+    border-radius: 0;
     width: auto;
     background: none;
     border: none;
@@ -423,7 +447,8 @@
     border: none;
   }
   .menu--compact .menu__item:hover {
-    background: none;
+    border-radius: 5px;
+    /*background: none;*/
   }
   .menu--compact .menu__item__link:hover {
     border: none;
@@ -434,7 +459,7 @@
   #slider #active {
     margin-top: -20px;
   }
-  #slider #slides #controls {
+  #slider #controls {
     bottom: 140px;
   }
   .slide__text__head, .slide__text__lead {
