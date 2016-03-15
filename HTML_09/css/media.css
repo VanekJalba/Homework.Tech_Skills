@@ -145,13 +145,17 @@
   }
   .slide__pop-up {
     -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+            -moz-transform: scale(0.7);
+             -ms-transform: scale(0.7);
+         transform: scale(0.7);
     right: -1.2%;
     bottom: -119px;
   }
   .slide__image {
     -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+            -moz-transform: scale(0.7);
+             -ms-transform: scale(0.7);
+         transform: scale(0.7);
     margin-left: 6%;
   }
   .slide__image img {
@@ -283,7 +287,8 @@
     display: none;
   }
   .menu--compact {
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     background-color: rgba(54, 41, 62, 0.9);
     border: 1px solid rgb(5, 17, 22);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
@@ -328,7 +333,8 @@
   .submenu .menu__item {
     height: 42px;
     line-height: 42px;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     border-top: 1px solid #54405c;
   }
   .menu--compact:hover .submenu {

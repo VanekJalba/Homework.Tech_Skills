@@ -1,5 +1,10 @@
+* input{
+  position: absolute;
+  left: -9999px;
+  /*display: none;*/
+}
 input {
-	display: none;
+	/*display: none;*/
 }
 #slider{
   position: relative;
@@ -85,7 +90,8 @@ input {
 	height: 17px;
 	background: black;
   opacity: 0.3;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 #active label:hover{
   border: 3px solid rgba(255,255,255,1);
@@ -192,7 +198,7 @@ letter-spacing: -0.2px;
 }
 /*MINI SLIDER*/
 #mini-slider input {
-  display: none;
+  /*display: none;*/
 }
 #mini-slider {
   position: relative;
@@ -243,13 +249,16 @@ letter-spacing: -0.2px;
   height: 16px;
   background: white;
   box-shadow: 0 0 0 1px #e6e6e6;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 #mini-active label:hover {
   border: 3px solid rgba(255, 255, 255, 1);
   background-clip: content-box;
 }
 #mini-slide1:checked ~ #mini-active label:nth-child(1), #mini-slide2:checked ~ #mini-active label:nth-child(2), #mini-slide3:checked ~ #mini-active label:nth-child(3), #mini-slide4:checked ~ #mini-active label:nth-child(4) {
+  background-image: -webkit-linear-gradient(bottom, #454545 0%, #6a6a6a 100%);
+  background-image: -moz-linear-gradient(bottom, #454545 0%, #6a6a6a 100%);
   background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
   border: 3px solid white;
   box-shadow: 0 0 0 1px #e6e6e6;

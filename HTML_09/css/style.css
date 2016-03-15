@@ -89,6 +89,7 @@ body {
   border-bottom: 1px solid #0d151b;
   border-top: 1px solid #33253a;
   height: 342px;
+  background-image: -moz-linear-gradient(bottom, #322539 0%, #745083 100%);
   background-image: -webkit-linear-gradient(bottom, #322539 0%, #745083 100%);
   background-image: linear-gradient(to top, #322539 0%, #745083 100%);
 }
@@ -175,7 +176,8 @@ body {
   margin: 0 auto;
 }
 .testimonial__box, .from-the-blog {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   float: left;
   width: 50%;
 }
@@ -304,7 +306,8 @@ body {
 }
 .other-logos__container {
   margin: 0 auto;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   background-color: #f9f9f9;
