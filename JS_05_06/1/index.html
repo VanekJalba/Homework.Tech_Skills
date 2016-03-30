@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript 5-6 #1</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container" style='min-width:800px' >
+    <div id="timerBox" class='text-center'>
+      <div class="counters bg-info" style='border:15px solid black; border-radius:50px; margin-bottom:20px'>
+        <div class="main-counters">
+          <span class="main-timer" style='font-size:180px; line-height:180px'>00:00:00</span>
+        </div>
+        <div class="row text-right">
+          <div class="col-xs-10">
+            <span class="miliSeconds" style='font-size:50px'>0</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class='col-xs-4 col-xs-offset-1'>
+          <input type="button" data-action='start' value="Start" class='btn btn-lg btn-block btn-success' style='font-size:50px; border:15px solid black; border-radius:50px; color:black'>
+        </div>
+        <div  class='col-xs-4 col-xs-offset-2'>
+          <input type="button" data-action='stop' value="Clear" class='btn btn-lg btn-block btn-danger' style='font-size:50px; border:15px solid black; border-radius:50px; color:black'>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
