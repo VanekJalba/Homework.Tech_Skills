@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS 7-8</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.2.min.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tabs">
+            <section class="title__container">
+                <span class="title title-active" data-num="1">Title #1</span>
+                <span class="title" data-num="2">Title #2</span>
+                <span class="title" data-num="3">Title #3</span>
+                <span class="title" data-num="4">Title #4</span>
+            </section>
+            <section class="article__container">
+                <div class="article article-active" data-num="1">
+                    <p>Text #1</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis id amet sunt architecto dolores tempore reprehenderit facere eaque non quam perspiciatis maxime blanditiis, rerum vel. Repellat, consectetur nemo. Iusto!</p>
+                </div>
+                <div class="article" data-num="2">
+                    <p>Text #2</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nobis ad corporis sapiente iusto iure repellendus ullam unde magni harum repellat maiores, voluptatibus adipisci rerum quibusdam, nesciunt atque, porro laborum!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nobis ad corporis sapiente iusto iure repellendus ullam unde magni harum repellat maiores, voluptatibus adipisci rerum quibusdam, nesciunt atque, porro laborum!</p>
+                </div>
+                <div class="article" data-num="3">
+                    <p>Text #3</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rem optio ducimus vel tempora fuga possimus assumenda earum cupiditate. Nulla, laboriosam magnam maxime fuga aliquam, commodi adipisci suscipit officiis minus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed laudantium totam nihil eum illum tempora est sunt ad! Error libero quas possimus quaerat pariatur alias vel incidunt quibusdam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed laudantium totam nihil eum illum tempora est sunt ad! Error libero quas possimus quaerat pariatur alias vel incidunt quibusdam facilis!</p>
+                </div>
+                <div class="article" data-num="4">
+                    <p>Text #4</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rem optio ducimus vel tempora fuga possimus assumenda earum cupiditate. Nulla, laboriosam magnam maxime fuga aliquam, commodi adipisci suscipit officiis minus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed laudantium totam nihil eum illum tempora est sunt ad! Error libero quas possimus quaerat pariatur alias vel incidunt quibusdam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed laudantium totam nihil eum illum tempora est sunt ad! Error libero quas possimus quaerat pariatur alias vel incidunt quibusdam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed laudantium totam nihil eum illum tempora est sunt ad! Error libero quas possimus quaerat pariatur alias vel incidunt quibusdam facilis!</p>
+                </div>
+            </section>
+        </div>
+        <form action="#" class="reg">
+            <fieldset class="inputs__container">
+                <div class="input">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname" tooltip="Please provide your firstname.">
+                </div>
+                <div class="input">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="lastname" tooltip="Please provide also your lastname.">
+                </div>
+                <div class="input">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" tooltip="Your work or home address.">
+                </div>
+            </fieldset>
+            <input type="button" value="Show help" class="showAllTooltip">
+        </form>
+    </div>
+</body>
+
+</html>

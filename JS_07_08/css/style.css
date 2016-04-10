@@ -1,0 +1,96 @@
+/* TABS */
+
+.wrapper {
+    display: block;
+    max-width: 800px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+.tabs {
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background: #7986CB;
+    border-radius: 5px;
+}
+.title__container {
+    background: #C5CAE9;
+    padding-left: 5px;
+    border-radius: 5px 5px 0 0;
+    height: 35px;
+}
+.title {
+    display: inline-block;
+    background: #7986CB;
+    color: white;
+    padding: 0 15px;
+    margin: 10px 3px 0 3px;
+    font-size: 15px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    line-height: 25px;
+}
+.title-active {
+    color: black;
+    background: white;
+    cursor: default;
+}
+.title:not(.title-active):hover {
+    background: #3F51B5;
+}
+.article__container {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+    font-size: 15px;
+}
+.article {
+    display: none;
+}
+.article-active {
+    display: block;
+}
+.article p {
+    margin: 4px;
+}
+
+/* TOOLTIP */
+
+.reg {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    background: #4A148C;
+    border: 1px solid grey;
+    margin: 20px;
+    padding: 10px;
+}
+.inputs__container {
+    border-radius: 5px;
+    background: #B39DDB;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.inputs__container label {
+    display: inline-block;
+    width: 70px;
+}
+.input {
+    position: relative;
+    padding: 10px 0;
+}
+.tooltip {
+    color: white;
+    position: absolute;
+    border-radius: 3px;
+    padding: 6px;
+    top: 6px;
+    left: 250px;
+    margin-left: 10px;
+    background: #9575CD;
+    width: 240px;
+    box-shadow: 0 0 4px 2px white;
+}
