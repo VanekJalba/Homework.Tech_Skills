@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS #9-10</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jcarousel.responsive.css">
+    <link rel="stylesheet" href="css/selectric.css">
+    <script src="js/jquery-1.12.2.min.js" charset="utf-8"></script>
+    <script src="js/jquery.jcarousel.js" charset="utf-8"></script>
+    <script src="js/jcarousel.responsive.js" charset="utf-8"></script>
+    <script src="js/jquery.selectric.js" charset="utf-8"></script>
+    <script src="js/jquery.color-2.1.2.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="menu jquery topToBottomMenu clearfix">
+                <li><a href="#">Nav 1</a></li>
+                <li><a href="#">Nav 2</a></li>
+                <li class="dropdown"><a href="#">Nav 3</a>
+                    <ul class="submenu">
+                        <li><a href="#">Nav 3.1</a></li>
+                        <li><a href="#">Nav 3.2</a></li>
+                        <li><a href="#">Nav 3.3</a></li>
+                        <li class="dropdown"><a href="#">Nav 3.4</a>
+                            <ul class="submenu">
+                                <li><a href="#">Nav 3.4.1</a></li>
+                                <li><a href="#">Nav 3.4.2</a></li>
+                                <li class="dropdown"><a href="#">Nav 3.4.3</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Nav 3.4.3.1</a></li>
+                                        <li><a href="#">Nav 3.4.3.2</a></li>
+                                        <li><a href="#">Nav 3.4.3.3</a></li>
+                                        <li><a href="#">Nav 3.4.3.4</a></li>
+                                        <li><a href="#">Nav 3.4.3.5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Nav 3.4.4</a></li>
+                                <li><a href="#">Nav 3.4.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nav 3.5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nav 4</a></li>
+                <li><a href="#">Nav 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container__jcarousel">
+        <div class="jcarousel__wrapper">
+            <div class="jcarousel">
+                <ul class="clearfix">
+                    <li><img src="img/bethlehem.jpg" alt=""></li>
+                    <li><img src="img/flensburg.jpg" alt=""></li>
+                    <li><img src="img/london.jpg" alt=""></li>
+                    <li><img src="img/singapore.jpg" alt=""></li>
+                    <li><img src="img/singapore2.jpg" alt=""></li>
+                </ul>
+            </div>
+            <a href="#" class="jcarousel-prev">‹</a>
+            <a href="#" class="jcarousel-next">›</a>
+            <div class="jcarousel-pagination"></div>
+        </div>
+    </div>
+
+    <div class="wrapper clearfix">
+        <div class="form">
+
+
+            <form action="#" method="get">
+                <fieldset class="select">
+                    <select name="sel" id="sel">
+                        <optgroup label="First group">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </optgroup>
+                        <optgroup label="Second group">
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <fieldset class="input-jquery">
+                  <h2>Jquery checkboxes</h2>
+                    <div>
+                        <label>Default checkbox
+                            <input type="checkbox" name="1" id="1">
+                        </label>
+                    </div>
+                    <div>
+                        <label>Checked checkbox
+                            <input type="checkbox" name="2" id="2" checked="checked">
+                        </label>
+                    </div>
+                    <div>
+                        <label>Disabled checkbox
+                            <input type="checkbox" name="3" id="3" disabled="disabled">
+                        </label>
+                    </div>
+                    <div>
+                        <label>Default checkbox
+                            <input type="checkbox" name="4" id="4">
+                        </label>
+                    </div>
+                    <div>
+                        <label>Checked and disabled checkbox
+                            <input type="checkbox" name="5" id="5" checked="checked" disabled="disabled">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="input-css">
+                  <h2>CSS checkboxes</h2>
+                    <div>
+                        <input type="checkbox" name="c1" id="c1">
+                        <label for="c1">Default checkbox</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="c2" id="c2" checked="checked">
+                        <label for="c2">Checked checkbox</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="c3" id="c3" disabled="disabled">
+                        <label for="c3">Disabled checkbox</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="c4" id="c4">
+                        <label for="c4">Default checkbox</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="c5" id="c5" checked="checked" disabled="disabled">
+                        <label for="c5">Checked and disabled checkbox</label>
+                    </div>
+                </fieldset>
+                <div class="submitBox">
+
+                  <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+
+        <div class="content">
+            <article>
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere doloribus sit provident, saepe officiis sed! Adipisci dolorum aliquam beatae, nesciunt laborum quaerat suscipit, minus nam velit hic dolor ducimus temporibus! Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Sint similique autem quis adipisci voluptas ratione beatae vitae unde consequuntur quibusdam, mollitia cupiditate iure tenetur atque nam quod architecto porro quas?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere doloribus sit provident, saepe officiis sed! Adipisci dolorum aliquam beatae, nesciunt laborum quaerat suscipit, minus nam velit hic dolor ducimus temporibus! Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Sint similique autem quis adipisci voluptas ratione beatae vitae unde consequuntur quibusdam, mollitia cupiditate iure tenetur atque nam quod architecto porro quas?
+                </p>
+                <h1>Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere doloribus sit provident, saepe officiis sed! Adipisci dolorum aliquam beatae, nesciunt laborum quaerat suscipit, minus nam velit hic dolor ducimus temporibus! Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Sint similique autem quis adipisci voluptas ratione beatae vitae unde consequuntur quibusdam, mollitia cupiditate iure tenetur atque nam quod architecto porro quas? Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Facere doloribus sit provident, saepe officiis sed! Adipisci dolorum aliquam beatae, nesciunt laborum quaerat suscipit, minus nam velit hic dolor ducimus temporibus! Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Sint similique autem quis adipisci voluptas ratione beatae vitae unde consequuntur quibusdam, mollitia cupiditate iure tenetur atque nam quod architecto porro quas?
+                </p>
+            </article>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="menu bottomToTopMenu javaScript clearfix">
+                <li><a href="#">Nav 1</a></li>
+                <li><a href="#">Nav 2</a></li>
+                <li class="dropdown"><a href="#">Nav 3</a>
+                    <ul class="submenu">
+                        <li><a href="#">Nav 3.1</a></li>
+                        <li><a href="#">Nav 3.2</a></li>
+                        <li><a href="#">Nav 3.3</a></li>
+                        <li class="dropdown"><a href="#">Nav 3.4</a>
+                            <ul class="submenu">
+                                <li><a href="#">Nav 3.4.1</a></li>
+                                <li><a href="#">Nav 3.4.2</a></li>
+                                <li class="dropdown"><a href="#">Nav 3.4.3</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Nav 3.4.3.1</a></li>
+                                        <li><a href="#">Nav 3.4.3.2</a></li>
+                                        <li><a href="#">Nav 3.4.3.3</a></li>
+                                        <li><a href="#">Nav 3.4.3.4</a></li>
+                                        <li><a href="#">Nav 3.4.3.5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Nav 3.4.4</a></li>
+                                <li><a href="#">Nav 3.4.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nav 3.5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nav 4</a></li>
+                <li><a href="#">Nav 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Helvetica Neue';
+}
+.wrapper {
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ----------------Form---------------- */
+
+.form {
+    background-color: #EDE7F6;
+    border-right: 2px dotted purple;
+    box-sizing: border-box;
+    margin: 15px;
+    width: 300px;
+    float: left;
+}
+.form fieldset {
+    margin: 0 auto;
+    padding: 10px;
+}
+.form h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.submitBox {
+    width: 100%;
+    margin: 0 auto;
+}
+.form input[type="submit"]:hover {
+    background-color: #a75498;
+}
+.form input[type="submit"] {
+    display: block;
+    background-color: #b163a3;
+    border: none;
+    border-radius: 6px;
+    width: 150px;
+    padding: 10px;
+    margin: 15px auto;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ----------------Jquery checkboxes---------------- */
+
+.input-jquery div {
+    line-height: 20px;
+    margin-bottom: 5px;
+    border-bottom: 2px dotted purple;
+}
+.niceCheck {
+    margin-left: 5px;
+    margin-bottom: -2px;
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url('../img/chk_bx_new.png') 0 0;
+    cursor: pointer;
+}
+.niceChecked {
+    background-position: 0 -18px;
+}
+.niceDisabled {
+    background-position: 0 -36px;
+    cursor: default;
+}
+.niceCheckedDisabled {
+    background-position: 0 -54px;
+    cursor: default;
+}
+
+/* ----------------CSS checkboxes---------------- */
+
+.input-css div {
+    line-height: 20px;
+    margin-bottom: 5px;
+    border-bottom: 2px dotted purple;
+}
+.input-css input {
+    display: none;
+}
+.input-css label:after {
+    float: right;
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 3px;
+    margin-left: 15px;
+    cursor: pointer;
+    position: relative;
+    background: url('../img/chk_bx_new.png') 0 0;
+}
+.input-css input[type="checkbox"]:checked+label:after {
+    background-position: 0 -18px;
+}
+.input-css input[type="checkbox"]:disabled+label:after {
+    background-position: 0 -36px;
+    cursor: default;
+}
+.input-css input[type="checkbox"]:checked:disabled+label:after {
+    background-position: 0 -54px;
+    cursor: default;
+}
+
+/* ----------------Menu nav---------------- */
+
+.nav {
+    padding: 10px 0;
+    vertical-align: middle;
+    background-color: #FF6464;
+}
+.menu {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.menu>li {
+    float: left;
+}
+.menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+.menu a:hover {
+    color: black;
+}
+.menu>li>a {
+    padding: 10px 15px;
+}
+.menu .dropdown {
+    position: relative;
+}
+.menu>.dropdown>a {
+    background: url('../img/arrow-down.png') right no-repeat;
+}
+.submenu {
+    z-index: 999;
+    background-color: #FF6464;
+    display: none;
+    width: 150px;
+    position: absolute;
+}
+.submenu .dropdown>a {
+    background: url('../img/arrow-right.png') right no-repeat;
+}
+.submenu li:not(:last-child)>a {
+    border-bottom: 1px solid #C83232;
+}
+
+/* ----------------topToBottomMenu---------------- */
+
+.topToBottomMenu>.dropdown>.submenu .submenu {
+    top: 0;
+    left: 150px;
+}
+
+/* ----------------bottomToTopMenu---------------- */
+
+.bottomToTopMenu>.dropdown>.submenu {
+    bottom: 36px;
+}
+.bottomToTopMenu>.dropdown>.submenu .submenu {
+    bottom: 0;
+    left: 150px;
+}
+
+/* ----------------Content---------------- */
+
+.content {
+    margin: 15px 15px 15px 300px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.content h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10px 0;
+}
+.content p {
+    text-indent: 15px;
+    margin: 8px 0;
+    font-size: 18px;
+}
