@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS 11-12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.carousel.css">
+    <script src="js/jquery-1.12.2.min.js" charset="utf-8"></script>
+    <script src="js/microTemplates.js" charset="utf-8"></script>
+    <script src="js/lodash.js" charset="utf-8"></script>
+    <script src="js/jquery.carousel.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div>
+        <ul class="jcarousel">
+            <li><img src="img\image1.jpg"></li>
+            <li><img src="img\image2.jpg"></li>
+            <li><img src="img\image3.jpg"></li>
+            <li><img src="img\image4.jpg"></li>
+            <li><img src="img\image5.jpg"></li>
+        </ul>
+    </div>
+    <script type="text/template" id="profile">
+      <div class="box">
+        <p class="tmplInfo">Шаблонизатор Резига</p>
+        <div class="content">
+          <h1><%= name %></h1>
+          <img src="img/<%= photo %>" alt="Фото" class="photo">
+          <p><%= occupation %></p>
+          <hr>
+          <p><%= question %></p>
+          <ul>
+            <% for (var i = 0; i < answers.length; i++) { %>
+            <li><%= answers[i] %></li>
+            <% }; %>
+          </ul>
+          <hr>
+          <p class="first_line">Мой контактный телефон
+            <br><%= phone %></p>
+          <p class="first_line">Мой профиль вконтакте
+            <br><a href="<%= socialLink %>"><%= socialName %></a></p>
+          <hr>
+          <p class="first_line">Мой фидбек
+            <br><%= feedback %></p>
+        </div>
+      </div>
+    </script>
+    <script type="text/template" id="profile-lodash">
+      <div class="box">
+        <p class="tmplInfo">Шаблонизатор Lodash</p>
+        <div class="content">
+          <h1><%= name %></h1>
+          <img src="img/<%= photo %>" alt="Фото" class="photo">
+          <p><%= occupation %></p>
+          <hr>
+          <p><%= question %></p>
+          <ul>
+            <% for (var i = 0; i < answers.length; i++) { %>
+            <li><%= answers[i] %></li>
+            <% }; %>
+          </ul>
+          <hr>
+          <p class="first_line">Мой контактный телефон
+            <br><%= phone %></p>
+          <p class="first_line">Мой профиль вконтакте
+            <br><a href="<%= socialLink %>"><%= socialName %></a></p>
+          <hr>
+          <p class="first_line">Мой фидбек
+            <br><%= feedback %></p>
+        </div>
+      </div>
+    </script>
+    <div class="template-content"></div>
+</body>
+
+</html>

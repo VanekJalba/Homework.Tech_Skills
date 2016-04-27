@@ -1,0 +1,56 @@
+.jcarousel {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.jcarousel:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.jcarousel-wraper {
+  position: relative;
+  box-sizing: border-box;
+  margin: 15px auto;
+  border: 12px solid white;
+  box-shadow: 0 0 2px grey;
+  border-radius: 5px;
+  max-width: 1000px;
+  min-width: 600px;
+}
+.jcarousel-overflow {
+  position: static;
+  overflow: hidden;
+}
+.jcarousel-item {
+  padding: 0 1px;
+  box-sizing: border-box;
+  background-color: white;
+  float: left;
+}
+.jcarousel-item img {
+  display: block;
+  width: 100%;
+}
+.jcarousel-left,
+.jcarousel-right {
+  opacity: 0.7;
+  margin-top: -17px;
+  top: 50%;
+  width: 22px;
+  height: 34px;
+  background: url('../img/arrows.png');
+  position: absolute;
+}
+.jcarousel-left {
+  left: 5px;
+}
+.jcarousel-right {
+  right: 5px;
+  background-position: -23px;
+}
+.jcarousel-left:hover,
+.jcarousel-right:hover {
+  opacity: 1;
+  }
