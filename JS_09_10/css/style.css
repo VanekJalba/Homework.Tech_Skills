@@ -157,6 +157,7 @@ body {
 .submenu {
     z-index: 999;
     background-color: #FF6464;
+    /*visibility: hidden;*/
     display: none;
     width: 150px;
     position: absolute;
