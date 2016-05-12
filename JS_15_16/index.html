@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS 15-16</title>
+    <script src="js/jquery-1.12.2.min.js" charset="utf-8"></script>
+    <script src="js/microTemplates.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="index.html" class="search search--main">
+      <input type="text" name="searchQuery" id="searchQuery" placeholder="Что ищем?">
+      <input type="submit" value="Искать" id="searchButton">
+    </form>
+    <!-- Блок с шаблоном. Работает с Google custom search -->
+    <script type="text/template" id="content">
+      <% for (i = 0; i < data.length; i++) { %>
+        <div class="result">
+          <p class="title">
+            <a href="<%= data[i].link %>" class="link" target="blank">
+              <%= data[i].htmlTitle %>
+            </a>
+          </p>
+          <p class="linkInfo"><%= data[i].htmlFormattedUrl %></p>
+          <p class="content">
+            <%= data[i].htmlSnippet %>
+          </p>
+        </div>
+        <% }; %>
+      </script>
+      <!-- Сюда добавляем генерируемый контент -->
+      <div class="content"></div>
+  </div>
+</body>
+
+</html>
