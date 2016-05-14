@@ -1,0 +1,29 @@
+.menu {
+  float: left;
+  width: 150px;
+}
+.menu li {
+  list-style: none;
+}
+.menu__link {
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+.article-box {
+  padding: 15px;
+  background-color: #D1C4E9;
+  margin-left: 150px;
+}
+.article {
+  display: block;
+  padding: 10px;
+}
+.article h2 {
+  text-align: center;
+}
+.article p {
+  text-indent: 15px;
+  margin: 5px 0;
+}

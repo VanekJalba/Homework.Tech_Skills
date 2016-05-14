@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #673AB7;
+  min-width: 600px;
+  font-family: Arial, sans-serif;
+}
+.wrapper-top {
+  box-sizing: border-box;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.header {
+  color: white;
+  font-size: 50px;
+  line-height: 70px;
+  text-align: center;
+  display: block;
+  height: 70px;
+}
+.content {
+  margin: 0 auto;
+  background-color: #9575CD;
+  max-width: 1000px;
+}
+.content:after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+.footer {
+  color: white;
+  margin-top: -50px;
+  display: block;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
