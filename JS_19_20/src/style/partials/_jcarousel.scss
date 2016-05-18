@@ -1,4 +1,6 @@
 .jcarousel-wrapper {
+  margin: 0 auto;
+  width: $width;
     // margin: 20px auto;
     position: relative;
     // border: 10px solid #fff;
@@ -108,7 +110,7 @@
     border-radius: 14px;
     padding: 3px;
     text-align: center;
-    
+
     margin-right: 2px;
 
     opacity: .75;
