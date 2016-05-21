@@ -14,7 +14,7 @@
 }
 
 .jcarousel ul {
-  height: $height-carousel;
+    height: $height-carousel;
     width: 20000em;
     position: relative;
     list-style: none;
@@ -35,12 +35,12 @@
     position: absolute;
     bottom: 20px;
     left: 50%;
-    transform: translate(-50%,0);;
+    transform: translate(-50%,0);
 }
 
 .jcarousel-pagination a {
-  color: transparent;
-  margin: 0 7px;
+    color: transparent;
+    margin: 0 7px;
     background-color: white;
     box-sizing: border-box;
     border: none;
@@ -50,9 +50,8 @@
     width: 15px;
     height: 15px;
     transition: all .5s;
-}
-
-.jcarousel-pagination a.active {
-  border: 3px solid white;
-    background-color: #001d1d;
+    &.active {
+      border: 3px solid white;
+        background-color: #001d1d;
+    }
 }

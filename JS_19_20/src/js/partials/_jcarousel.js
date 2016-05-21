@@ -25,11 +25,14 @@
             });
 
         $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
+            .on('jcarouselpagination:active', 'a', function(e) {
                 $(this).addClass('active');
             })
-            .on('jcarouselpagination:inactive', 'a', function() {
+            .on('jcarouselpagination:inactive', 'a', function(e) {
                 $(this).removeClass('active');
+            })
+            .on('click', function(e) {
+                e.preventDefault();
             })
             .jcarouselPagination({
                 perPage: 1,

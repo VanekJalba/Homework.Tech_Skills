@@ -1,9 +1,12 @@
+$width:              1160px;
 $font-title:         Ubuntu, sans-serif;
 $font-main-menu:     Ubuntu Condensed, sans-serif;
 $font-content:       Arial, sans-serif;
 // logo
 $color-lg-name:      #434343;
 $color-lg-subname:   #333;
+// carousel
+$height-carousel:    470px;
 // about section
 $color-about-num:    rgba(42, 43, 46, 0.1);
 $color-about-title:  #2a2b2e;
@@ -15,8 +18,5 @@ $bg-grey:            #2a2d32;
 // other links section
 $color-other-links:  rgba(255,255,255,0.3);
 // footer section
-$color-white-transp:       rgba(255,255,255,0.2);
-$bg-grey-transp:          rgba(255,255,255,0.05);
-
-$width:              1160px;
-$height-carousel: 470px;
+$color-white-transp: rgba(255,255,255,0.2);
+$bg-grey-transp:     rgba(255,255,255,0.05);
