@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
-    rigger = require('gulp-rigger');
+    rigger = require('gulp-rigger'),
+    sourcemaps = require('gulp-sourcemaps');
 
 /* -------------------------Homework JS 17-18------------------------- */
 gulp.task('scripts', function () {
@@ -27,7 +28,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('JS_17_18/dist/css/'));
 });
 
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('17_18:build', ['scripts', 'styles']);
 /* -------------------------Homework JS 19-20------------------------- */
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -56,11 +57,7 @@ var path = {
 var config = {
     server: {
         baseDir: "./JS_19_20/build"
-    },
-    // tunnel: true,
-    // host: 'localhost',
-    // port: 9000,
-    // logPrefix: "Frontend_Devil"
+    }
 };
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
@@ -70,15 +67,19 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
-        // .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(sass()) //Скомпилируем
+        .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(autoprefixer()) //Добавим вендорные префиксы
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
 });
