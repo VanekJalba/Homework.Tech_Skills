@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     rigger = require('gulp-rigger'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    babel = require("gulp-babel");
 
 /* -------------------------Homework JS 17-18------------------------- */
 gulp.task('scripts', function () {
@@ -123,3 +124,77 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 gulp.task('19_20:build', ['build', 'webserver', 'watch']);
+/* -------------------------Homework JS 21-22------------------------- */
+var path22 = {
+    build: { //Тут мы укажем куда складывать готовые после сборки файлы
+        html: 'JS_21_22/2/build/',
+        js: 'JS_21_22/2/build/js/',
+        css: 'JS_21_22/2/build/css/'
+    },
+    src: { //Пути откуда брать исходники
+        html: 'JS_21_22/2/src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        js: 'JS_21_22/2/src/js/script.min.js',//В стилях и скриптах нам понадобятся только main файлы
+        style: 'JS_21_22/2/src/style/style.min.scss'
+    },
+    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+        html: 'JS_21_22/2/src/**/*.html',
+        js: 'JS_21_22/2/src/js/**/*.js',
+        style: 'JS_21_22/2/src/style/**/*.scss'
+    },
+    clean: './JS_21_22/2/build'
+};
+var config22 = {
+    server: {
+        baseDir: "./JS_21_22/2/build"
+    }
+};
+gulp.task('21_22:html:build', function () {
+    gulp.src(path22.src.html) //Выберем файлы по нужному пути
+        .pipe(gulp.dest(path22.build.html)) //Выплюнем их в папку build
+        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+});
+gulp.task('21_22:js:build', function () {
+    gulp.src(path22.src.js) //Найдем наш main файл
+        .pipe(rigger()) //Прогоним через rigger
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.write()) //Пропишем карты
+        .pipe(gulp.dest(path22.build.js)) //Выплюнем готовый файл в build
+        .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+gulp.task('21_22:style:build', function () {
+    gulp.src(path22.src.style) //Выберем наш main.scss
+        .pipe(sass()) //Скомпилируем
+        .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(autoprefixer()) //Добавим вендорные префиксы
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path22.build.css)) //И в build
+        .pipe(reload({stream: true}));
+});
+gulp.task('21_22:buildAll', [
+    '21_22:html:build',
+    '21_22:js:build',
+    '21_22:style:build'
+]);
+gulp.task('21_22:watch', function(){
+    watch([path22.watch.html], function(event, cb) {
+        gulp.start('21_22:html:build');
+    });
+    watch([path22.watch.style], function(event, cb) {
+        gulp.start('21_22:style:build');
+    });
+    watch([path22.watch.js], function(event, cb) {
+        gulp.start('21_22:js:build');
+    });
+});
+gulp.task('21_22:webserver', function () {
+    browserSync.init(config22);
+});
+gulp.task('21_22:clean', function (cb) {
+    rimraf(path22.clean, cb);
+});
+gulp.task('21_22:build', ['21_22:buildAll', '21_22:webserver', '21_22:watch']);
