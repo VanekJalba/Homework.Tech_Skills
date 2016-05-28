@@ -1,0 +1,20 @@
+$ff-title: Montserrat, sans-serif;
+$ff-content: "Roboto Light", sans-serif;
+%font-title_bold {
+  font-family: $ff-title;
+  font-weight: bold;
+}
+%font-title_bold--white {
+  font-family: $ff-title;
+  font-weight: bold;
+  color: white;
+}
+%font-title_bold--black {
+  font-family: $ff-title;
+  font-weight: bold;
+  color: #333;
+}
+%min-max-w {
+  min-width: 320px;
+  max-width: 940px;
+}
