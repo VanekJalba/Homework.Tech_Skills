@@ -19,38 +19,34 @@ body {
   clear: both;
 }
 .link  {
-
 }
 /* --------------------------HEADER------------------------------ */
 .header__wrapper {
   margin: 0 auto;
+  height: 540px;
   background: url('../img/bg_header.jpg') no-repeat;
   background-position: 51.5% -10px;
   background-size: auto 550px;
-  height: 540px;
   @media screen and (min-width: 768px) {
+    height: 700px;
     background-position: 50% 0;
     background-size: auto 700px;
-    height: 700px;
   }
-  transition: all .5s;
+  // transition: all .5s;
 }
 .header {
   @extend %min-max-w;
-  // min-width: 320px;
-  // max-width: 940px;
-  margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
   .site-name {
     margin: 118px 0 28px 0;
     @extend %font-title_bold--white;
-    font-size: 20px;
     text-transform: uppercase;
+    font-size: 20px;
     @media screen and (min-width: 768px) {
       float: left;
-      letter-spacing: 0.8px;
       margin: 49px 0 0 49px;
+      letter-spacing: 0.8px;
     }
     @media screen and (min-width: 940px) {
       margin: 49px 0 0 0;
@@ -80,12 +76,19 @@ body {
     height: 100%;
     @extend %font-title_bold--white;
     font-size: 14px;
+    &:hover {
+      color: $red;
+      transition: all 0.4s;
+    }
   }
   .sign {
     margin-left: 17px;
     padding: 0 16px;
     border: 2px solid white;
     border-radius: 18px;
+    &:hover {
+      border-color: $red;
+    }
   }
   .header__title {
     line-height: 37px;
@@ -104,8 +107,8 @@ body {
     color: white;
     font-size: 18px;
     @media screen and (min-width: 768px) {
-      font-size: 24px;
       margin: 23px auto 37px auto;
+      font-size: 24px;
     }
   }
   .header__link {
@@ -116,10 +119,14 @@ body {
     font-size: 14px;
     line-height: 40px;
     height: 40px;
-    background-color: #ff4e50;
+    background-color: $red;
     border-radius: 20px;
     @media screen and (min-width: 768px) {
       padding: 0 23px;
+    }
+    &:hover {
+      box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.63);
+      transition: all .4s;
     }
   }
 }
@@ -127,45 +134,38 @@ body {
 .about__container {
   box-sizing: border-box;
   padding: 38px 10px 0 10px;
-  // padding-top: 38px;
-  margin: 0 auto;
   @extend %min-max-w;
   @media screen and (min-width: 768px) {
     padding: 38px 0 0 0;
-
   }
-
   .about__main-title {
     margin-bottom: 15px;
     @extend %font-title_bold--black;
-    font-size: 22px;
     text-align: center;
+    font-size: 22px;
     @media screen and (min-width: 768px) {
       margin: 59px 0 25px 0;
     }
-
   }
   .about__article {
     box-sizing: border-box;
     margin: 10px auto;
-    height: 240px;
     min-width: 300px;
     max-width: 400px;
+    height: 240px;
     @media screen and (min-width: 768px) {
       height: 400px;
-      padding: 0 10px;
-      min-width: auto;
-      float: left;
       width: 33.3%;
-      // margin: 5px;
+      min-width: auto;
+      padding: 0 10px;
+      float: left;
     }
-
   }
   .about__article__slide {
-    border-radius: 4px;
     overflow: hidden;
     box-sizing: border-box;
     padding: 20px;
+    border-radius: 4px;
   }
   .about__article__slide--step1 {
     background-image: url('../img/bg_slide_1.jpg');
@@ -193,7 +193,6 @@ body {
       background-position: 49% 58%;
       background-size: auto 113%;
     }
-
   }
   .about__article__slide__inner__wrapper {
     height: 100%;
@@ -206,30 +205,387 @@ body {
     left: 0;
   }
   .about__title {
-    box-sizing: border-box;
     display: inline-block;
+    box-sizing: border-box;
+    height: 20px;
+    margin-bottom: 15px;
+    padding: 0 13px;
+    border-radius: 10px;
+    background-color: $red;
     color: white;
     font-family: Montserrat, Arial, sans-serif;
     font-size: 10px;
     text-transform: uppercase;
-    height: 20px;
     line-height: 20px;
-    background-color: #ff4e50;
-    border-radius: 10px;
-    margin-bottom: 15px;
     letter-spacing: 2px;
-    padding: 0 13px;
   }
   .about__subtitle {
+    margin-bottom: 13px;
     @extend %font-title_bold--white;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 13px;
   }
   .about__text {
-    color: #ccc;
+    color: $grey;
     font-family: $ff-content;
     font-size: 14px;
     line-height: 15px;
+  }
+}
+/* --------------------------PARTNERS------------------------------ */
+.partners__wrapper {
+  .partners__box {
+    box-sizing: border-box;
+    @extend %min-max-w;
+    text-align: center;
+  }
+  .partners__box__title {
+    padding: 0 20px;
+    margin: 36px auto 15px auto;
+    @extend %font-title_bold--black;
+    line-height: 25px;
+    font-size: 22px;
+    @media screen and (min-width: 768px) {
+      margin: 87px auto 34px;
+    }
+  }
+  .partners {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 67.5%;
+    margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 38px;
+    }
+    @media screen and (min-width: 940px) {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+  }
+  .partners__item__wrapper {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    @media screen and (min-width: 768px) {
+      float: left;
+      width: 50%;
+    }
+    @media screen and (min-width: 940px) {
+      width: 25%;
+    }
+  }
+  .partners__item {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 216px;
+    display: block;
+    &:hover img {
+      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.63);
+      transition: box-shadow 0.4s;
+    }
+  }
+  .partners__item__photo {
+    width: 122px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .partners__item__photo img {
+    display: block;
+    width: 122px;
+    height: 122px;
+    border-radius: 100%;
+  }
+  .partners__item__photo__ico {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    background: url('../img/ico_sprite_users.png') 0 0 no-repeat;
+  }
+  .partners__item__photo__ico--tea {
+    background-position: -41px 0;
+  }
+  .partners__item__photo__ico--science {
+    background-position: -82px 0;
+  }
+  .partners__item__photo__ico--plane {
+    background-position: -123px 0;
+  }
+  .partners__item__name {
+    margin: 19px 0 13px 0;
+    @extend %font-title_bold--black;
+    font-size: 14px;
+  }
+  .partners__item__text {
+    line-height: 18px;
+    font-family: $ff-content;
+    font-size: 14px;
+    color: #666;
+  }
+  .partners__box__link {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    padding: 0 72px;
+    border: 2px solid $red;
+    border-radius: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    color: $red;
+    line-height: 40px;
+    @media screen and (min-width: 768px) {
+      padding: 0 27px;
+    }
+    &:hover {
+      background-color: $red;
+      color: white;
+      transition: all .4s;
+    }
+  }
+}
+/* --------------------------ACTIVITY------------------------------ */
+.activity__wrapper {
+  .activity__box {
+    @extend %min-max-w;
+    text-align: center;
+  }
+  .actity__box__title {
+    line-height: 25px;
+    margin: 36px auto 10px auto;
+    @extend %font-title_bold--black;
+    font-size: 22px;
+    @media screen and (min-width: 768px) {
+      margin: 96px auto 26px auto;
+    }
+  }
+  .activity__grid__container {
+    width: 100%;
+  }
+  /* MASONRY settings */
+  .activity__grid__item {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+      width: 33.3%;
+      height: 329px;
+      float: left;
+      padding: 10px 10px;
+    }
+    .activity__grid__item__img {
+      background-color: #333;
+      height: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+    a {
+      opacity: 0.7;
+      height: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      background-image: url('../img/bg_slide_1.jpg');
+      background-position: center;
+      background-size: cover;
+      &:hover {
+        // box-shadow: 0 0 6px 3px $red;
+        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.63);
+        transition: box-shadow 0.4s;
+      }
+
+    }
+  }
+  .activity__grid__item--width2 {
+    @media screen and (min-width: 768px) {
+      width: 66.6%;
+    }
+  }
+  .activity__grid__item__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    @extend %font-title_bold--white;
+    font-size: 22px;
+  }
+  .activity__box__search {
+  }
+  .activity__box__search__title {
+    @extend .actity__box__title;
+    margin: 32px auto 13px auto;
+    @media screen and (min-width: 768px) {
+      margin: 87px auto 33px auto;
+    }
+  }
+  .activity__box__search__subtitle {
+    margin-bottom: 18px;
+    color: #333;
+    font-family: $ff-content;
+    font-size: 18px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 41px;
+    }
+  }
+  .activity__box__search__form {
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 90px;
+    }
+  }
+  .activity__box__search__form__input {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    display: block;
+    width: 280px;
+    line-height: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 #eee;
+    color: #999;
+    font-family: $ff-content;
+    font-size: 14px;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      width: 240px;
+    }
+  }
+  .activity__box__search__form__submit {
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+    width: 280px;
+    border: none;
+    height: 40px;
+    border: 2px solid $red;
+    background-color: $red;
+    border-radius: 20px;
+    @extend %font-title_bold--white;
+    font-size: 14px;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      width: 160px;
+    }
+    &:hover {
+      color: $red;
+      background-color: white;
+      transition: all 0.4s;
+    }
+  }
+}
+/* --------------------------FOOTER------------------------------ */
+.footer__wrapper {
+    border-top: 4px solid $red;
+  .footer {
+    padding-top: 18px;
+    text-align: center;
+    @extend %min-max-w;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+      padding-top: 40px;
+    }
+  }
+  .footer__site-name {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    letter-spacing: 0.8px;
+    color: $red;
+    @extend %font-title_bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      margin-left: 37px;
+      float: left;
+      text-align: left;
+      width: 25.5%;
+    }
+    @media screen and (min-width: 940px) {
+      margin-left: 0;
+    }
+  }
+  .menu {
+    @media screen and (min-width: 768px) {
+      float: left;
+      padding-left: 34px;
+      width: 44%;
+    }
+    @media screen and (min-width: 940px) {
+      width: 34%;
+      padding-left: 0;
+    }
+    .menu__item__dropdown {
+      &:first-child {
+        margin-bottom: 11px;
+      }
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+    &>.menu__item {
+        box-sizing: border-box;
+        @extend %font-title_bold--black;
+        font-size: 14px;
+        @media screen and (min-width: 768px) {
+          text-align: left;
+          float: left;
+          width: 50%;
+        }
+    }
+  }
+  .submenu {
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
+    }
+    .menu__item {
+      display: inline-block;
+      margin: 0 5px;
+      @media screen and (min-width: 768px) {
+        display: block;
+        text-align: left;
+        margin: 0;
+      }
+    }
+    .menu__link {
+      color: #666;
+      font-family: $ff-content;
+      font-size: 14px;
+      line-height: 24px;
+      &:hover {
+        color: $red;
+        transition: color 0.4s;
+      }
+    }
+  }
+  .footer__design-by {
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 15px;
+    &__title {
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    color: $grey;
+    @extend %font-title_bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    }
+    @media screen and (min-width: 768px) {
+      text-align: right;
+      float: right;
+      width: 20%;
+      padding-right: 40px;
+    }
+    @media screen and (min-width: 940px) {
+      padding-right: 0;
+    }
+
   }
 }
