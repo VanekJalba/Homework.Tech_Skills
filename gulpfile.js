@@ -210,7 +210,7 @@ var path_exam = {
     },
     src: { //Пути откуда брать исходники
         html: 'JS_Exam/src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'JS_Exam/src/js/script.min.js',//В стилях и скриптах нам понадобятся только main файлы
+        js: 'JS_Exam/src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'JS_Exam/src/style/style.min.scss',
         img: 'JS_Exam/src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'JS_Exam/src/fonts/**/*.*'
@@ -249,7 +249,10 @@ gulp.task('Exam:style:build', function () {
         .pipe(plumber())
         .pipe(sass()) //Скомпилируем
         .pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(autoprefixer()) //Добавим вендорные префиксы
+        .pipe(autoprefixer({
+			    browsers: ['last 2 versions', 'ie >= 8'],
+			    cascade: false
+		    })) //Добавим вендорные префиксы
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path_exam.build.css)) //И в build
