@@ -372,7 +372,7 @@ body {
     @media screen and (min-width: 768px) {
       width: 33.3%;
       height: 329px;
-      float: left;
+      // float: left;
       padding: 10px 10px;
     }
     .activity__grid__item__img {
@@ -381,21 +381,22 @@ body {
       width: 100%;
       display: block;
       border-radius: 4px;
-    }
-    a {
-      opacity: 0.7;
-      height: 100%;
-      width: 100%;
-      display: block;
-      border-radius: 4px;
-      background-image: url('../img/bg_slide_1.jpg');
-      background-position: center;
-      background-size: cover;
       &:hover {
         // box-shadow: 0 0 6px 3px $red;
         box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.63);
         transition: box-shadow 0.4s;
       }
+
+    }
+    .activity__grid__item__img__inner {
+      opacity: 0.7;
+      height: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      // background-image: url('../img/bg_slide_1.jpg');
+      background-position: center;
+      background-size: cover;
 
     }
   }

@@ -164,7 +164,9 @@
         <p class="actity__box__title">Discover holiday activity ideas</p>
         <div class="activity__grid__container">
           <div class="activity__grid clearfix">
-            <div class="activity__grid__item">
+
+
+            <!-- <div class="activity__grid__item">
               <div class="activity__grid__item__img"><a href="#"></a></div>
               <p class="activity__grid__item__name">Sport and Activity</p>
             </div>
@@ -191,7 +193,9 @@
             <div class="activity__grid__item">
               <div class="activity__grid__item__img"><a href="#"></a></div>
               <p class="activity__grid__item__name"></p>
-            </div>
+            </div> -->
+
+
           </div>
         </div>
           <div class="activity__box__search">
@@ -224,6 +228,21 @@
         </div>
       </footer>
     </div>
+    <script type="text/template" id="activity__grid__template">
+      <% for (var i = 0; i < 7; i++) { %>
+        <% if (i === 4 || i === 5) { %>
+        <div class="activity__grid__item activity__grid__item--width2">
+        <% } else { %>
+        <div class="activity__grid__item">
+        <% }; %>
+        <a  class="activity__grid__item__img" href="<%= dataImg.hits[i].pageURL %>" target="blank">
+          <div class="activity__grid__item__img__inner"  style="background-image: url(<%= dataImg.hits[i].webformatURL %>)" >
+          </div>
+          <p class="activity__grid__item__name"><%= dataImg.hits[i].tags %></p>
+        </a>
+        </div>
+      <% }; %>
+    </script>
 </body>
 
 </html>
