@@ -13,7 +13,9 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     sourcemaps = require('gulp-sourcemaps'),
     plumber = require('gulp-plumber'),
-    babel = require("gulp-babel");
+    babel = require("gulp-babel"),
+    imagemin = require('gulp-imagemin'),
+    spritesmith = require('gulp.spritesmith');
 
 /* -------------------------Homework JS 17-18------------------------- */
 gulp.task('scripts', function () {
@@ -205,6 +207,8 @@ var path_exam = {
         html: 'JS_Exam/build/',
         js: 'JS_Exam/build/js/',
         css: 'JS_Exam/build/css/',
+        sprite: 'JS_Exam/src/img/',
+        spriteCss: 'JS_Exam/src/style/partials/',
         img: 'JS_Exam/build/img/',
         fonts: 'JS_Exam/build/fonts/'
     },
@@ -212,7 +216,8 @@ var path_exam = {
         html: 'JS_Exam/src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'JS_Exam/src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'JS_Exam/src/style/style.min.scss',
-        img: 'JS_Exam/src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'JS_Exam/src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        sprite: 'JS_Exam/src/img/sprite/*.png',
         fonts: 'JS_Exam/src/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -260,8 +265,25 @@ gulp.task('Exam:style:build', function () {
 });
 gulp.task('Exam:image:build', function () {
     gulp.src(path_exam.src.img) //Выберем наши картинки
+        .pipe(imagemin({
+          plugins: [imagemin.jpegtran(), imagemin.optipng()],
+          verbose: true
+        }))
         .pipe(gulp.dest(path_exam.build.img)) //И бросим в build
         .pipe(reload({stream: true}));
+});
+gulp.task('Exam:sprite:build', function () {
+    var spriteData =
+    gulp.src(path_exam.src.sprite)
+        .pipe(spritesmith({
+              imgName: 'ico_sprite_users.png',
+              cssName: '_sprite.scss',
+              cssFormat: 'sass',
+              algorithm: 'left-right',
+              padding: 1
+            }));
+        spriteData.img.pipe(gulp.dest(path_exam.build.sprite));
+        spriteData.css.pipe(gulp.dest(path_exam.build.spriteCss));
 });
 gulp.task('Exam:fonts:build', function() {
     gulp.src(path_exam.src.fonts)
