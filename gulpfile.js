@@ -320,3 +320,123 @@ gulp.task('exam:clean', function (cb) {
     rimraf(path_exam.clean, cb);
 });
 gulp.task('exam:build:all', ['Exam:build', 'Exam:webserver', 'Exam:watch']);
+
+/* -------------------------GoIT examples------------------------- */
+var path_examples = {
+    build: { //Тут мы укажем куда складывать готовые после сборки файлы
+        html: 'GoIT_Examples/build/',
+        js: 'GoIT_Examples/build/js/',
+        css: 'GoIT_Examples/build/css/',
+        sprite: 'GoIT_Examples/src/img/',
+        spriteCss: 'GoIT_Examples/src/css/partials/',
+        img: 'GoIT_Examples/build/img/',
+        fonts: 'GoIT_Examples/build/fonts/'
+    },
+    src: { //Пути откуда брать исходники
+        html: 'GoIT_Examples/src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        js: 'GoIT_Examples/src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
+        style: 'GoIT_Examples/src/css/style.min.scss',
+        img: 'GoIT_Examples/src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        sprite: 'GoIT_Examples/src/img/sprite/*.png',
+        fonts: 'GoIT_Examples/src/fonts/**/*.*'
+    },
+    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+        html: 'GoIT_Examples/src/**/*.html',
+        js: 'GoIT_Examples/src/js/**/*.js',
+        style: 'GoIT_Examples/src/css/**/*.scss',
+        img: 'GoIT_Examples/src/img/**/*.*',
+        fonts: 'GoIT_Examples/src/fonts/**/*.*'
+    },
+    clean: './GoIT_Examples/build'
+};
+var config_examples = {
+    server: {
+        baseDir: "./GoIT_Examples/build"
+    }
+};
+gulp.task('examples:html:build', function () {
+    gulp.src(path_examples.src.html) //Выберем файлы по нужному пути
+        .pipe(gulp.dest(path_examples.build.html)) //Выплюнем их в папку build
+        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+});
+gulp.task('examples:js:build', function () {
+    gulp.src(path_examples.src.js) //Найдем наш main файл
+        .pipe(plumber())
+        .pipe(rigger()) //Прогоним через rigger
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.write()) //Пропишем карты
+        .pipe(gulp.dest(path_examples.build.js)) //Выплюнем готовый файл в build
+        .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+gulp.task('examples:style:build', function () {
+    gulp.src(path_examples.src.style) //Выберем наш main.scss
+        .pipe(plumber())
+        .pipe(sass()) //Скомпилируем
+        .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(autoprefixer({
+			    browsers: ['last 2 versions', 'ie >= 8'],
+			    cascade: false
+		    })) //Добавим вендорные префиксы
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path_examples.build.css)) //И в build
+        .pipe(reload({stream: true}));
+});
+gulp.task('examples:image:build', function () {
+    gulp.src(path_examples.src.img) //Выберем наши картинки
+        .pipe(imagemin({
+          plugins: [imagemin.jpegtran(), imagemin.optipng()],
+          verbose: true
+        }))
+        .pipe(gulp.dest(path_examples.build.img)) //И бросим в build
+        .pipe(reload({stream: true}));
+});
+gulp.task('examples:sprite:build', function () {
+    var spriteData =
+    gulp.src(path_examples.src.sprite)
+        .pipe(spritesmith({
+              imgName: 'ico_sprite_users.png',
+              cssName: '_sprite.scss',
+              cssFormat: 'sass',
+              algorithm: 'left-right',
+              padding: 1
+            }));
+        spriteData.img.pipe(gulp.dest(path_examples.build.sprite));
+        spriteData.css.pipe(gulp.dest(path_examples.build.spriteCss));
+});
+gulp.task('examples:fonts:build', function() {
+    gulp.src(path_examples.src.fonts)
+        .pipe(gulp.dest(path_examples.build.fonts))
+});
+gulp.task('examples:build', [
+    'examples:html:build',
+    'examples:js:build',
+    'examples:style:build',
+    'examples:fonts:build',
+    'examples:image:build'
+]);
+gulp.task('examples:watch', function(){
+    watch([path_examples.watch.html], function(event, cb) {
+        gulp.start('examples:html:build');
+    });
+    watch([path_examples.watch.style], function(event, cb) {
+        gulp.start('examples:style:build');
+    });
+    watch([path_examples.watch.js], function(event, cb) {
+        gulp.start('examples:js:build');
+    });
+    watch([path_examples.watch.img], function(event, cb) {
+        gulp.start('examples:image:build');
+    });
+    watch([path_examples.watch.fonts], function(event, cb) {
+        gulp.start('examples:fonts:build');
+    });
+});
+gulp.task('examples:webserver', function () {
+    browserSync.init(config_examples);
+});
+gulp.task('examples:clean', function (cb) {
+    rimraf(path_examples.clean, cb);
+});
+gulp.task('examples:build:all', ['examples:build', 'examples:webserver', 'examples:watch']);
