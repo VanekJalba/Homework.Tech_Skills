@@ -12,7 +12,10 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     rigger = require('gulp-rigger'),
     sourcemaps = require('gulp-sourcemaps'),
-    babel = require("gulp-babel");
+    plumber = require('gulp-plumber'),
+    babel = require("gulp-babel"),
+    imagemin = require('gulp-imagemin'),
+    spritesmith = require('gulp.spritesmith');
 
 /* -------------------------Homework JS 17-18------------------------- */
 gulp.task('scripts', function () {
@@ -198,3 +201,122 @@ gulp.task('21_22:clean', function (cb) {
     rimraf(path22.clean, cb);
 });
 gulp.task('21_22:build', ['21_22:buildAll', '21_22:webserver', '21_22:watch']);
+/* -------------------------Homework JS Exam------------------------- */
+var path_exam = {
+    build: { //Тут мы укажем куда складывать готовые после сборки файлы
+        html: 'JS_Exam/build/',
+        js: 'JS_Exam/build/js/',
+        css: 'JS_Exam/build/css/',
+        sprite: 'JS_Exam/src/img/',
+        spriteCss: 'JS_Exam/src/style/partials/',
+        img: 'JS_Exam/build/img/',
+        fonts: 'JS_Exam/build/fonts/'
+    },
+    src: { //Пути откуда брать исходники
+        html: 'JS_Exam/src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        js: 'JS_Exam/src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
+        style: 'JS_Exam/src/style/style.min.scss',
+        img: 'JS_Exam/src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        sprite: 'JS_Exam/src/img/sprite/*.png',
+        fonts: 'JS_Exam/src/fonts/**/*.*'
+    },
+    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+        html: 'JS_Exam/src/**/*.html',
+        js: 'JS_Exam/src/js/**/*.js',
+        style: 'JS_Exam/src/style/**/*.scss',
+        img: 'JS_Exam/src/img/**/*.*',
+        fonts: 'JS_Exam/src/fonts/**/*.*'
+    },
+    clean: './JS_Exam/build'
+};
+var config_exam = {
+    server: {
+        baseDir: "./JS_Exam/build"
+    }
+};
+gulp.task('Exam:html:build', function () {
+    gulp.src(path_exam.src.html) //Выберем файлы по нужному пути
+        .pipe(gulp.dest(path_exam.build.html)) //Выплюнем их в папку build
+        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+});
+gulp.task('Exam:js:build', function () {
+    gulp.src(path_exam.src.js) //Найдем наш main файл
+        .pipe(plumber())
+        .pipe(rigger()) //Прогоним через rigger
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.write()) //Пропишем карты
+        .pipe(gulp.dest(path_exam.build.js)) //Выплюнем готовый файл в build
+        .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+gulp.task('Exam:style:build', function () {
+    gulp.src(path_exam.src.style) //Выберем наш main.scss
+        .pipe(plumber())
+        .pipe(sass()) //Скомпилируем
+        .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(autoprefixer({
+			    browsers: ['last 2 versions', 'ie >= 8'],
+			    cascade: false
+		    })) //Добавим вендорные префиксы
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path_exam.build.css)) //И в build
+        .pipe(reload({stream: true}));
+});
+gulp.task('Exam:image:build', function () {
+    gulp.src(path_exam.src.img) //Выберем наши картинки
+        .pipe(imagemin({
+          plugins: [imagemin.jpegtran(), imagemin.optipng()],
+          verbose: true
+        }))
+        .pipe(gulp.dest(path_exam.build.img)) //И бросим в build
+        .pipe(reload({stream: true}));
+});
+gulp.task('Exam:sprite:build', function () {
+    var spriteData =
+    gulp.src(path_exam.src.sprite)
+        .pipe(spritesmith({
+              imgName: 'ico_sprite_users.png',
+              cssName: '_sprite.scss',
+              cssFormat: 'sass',
+              algorithm: 'left-right',
+              padding: 1
+            }));
+        spriteData.img.pipe(gulp.dest(path_exam.build.sprite));
+        spriteData.css.pipe(gulp.dest(path_exam.build.spriteCss));
+});
+gulp.task('Exam:fonts:build', function() {
+    gulp.src(path_exam.src.fonts)
+        .pipe(gulp.dest(path_exam.build.fonts))
+});
+gulp.task('Exam:build', [
+    'Exam:html:build',
+    'Exam:js:build',
+    'Exam:style:build',
+    'Exam:fonts:build',
+    'Exam:image:build'
+]);
+gulp.task('Exam:watch', function(){
+    watch([path_exam.watch.html], function(event, cb) {
+        gulp.start('Exam:html:build');
+    });
+    watch([path_exam.watch.style], function(event, cb) {
+        gulp.start('Exam:style:build');
+    });
+    watch([path_exam.watch.js], function(event, cb) {
+        gulp.start('Exam:js:build');
+    });
+    watch([path_exam.watch.img], function(event, cb) {
+        gulp.start('Exam:image:build');
+    });
+    watch([path_exam.watch.fonts], function(event, cb) {
+        gulp.start('Exam:fonts:build');
+    });
+});
+gulp.task('Exam:webserver', function () {
+    browserSync.init(config_exam);
+});
+gulp.task('exam:clean', function (cb) {
+    rimraf(path_exam.clean, cb);
+});
+gulp.task('exam:build:all', ['Exam:build', 'Exam:webserver', 'Exam:watch']);

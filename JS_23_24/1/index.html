@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS 23-24</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script data-main="js/app" src="js/libs/require.js"></script>
+</head>
+
+<body>
+    <script type="text/template" id="wrapper-template">
+        <div class="wrapper">
+          <p class="todo-title">To-Do list</p>
+            <ul class="item-list"></ul>
+            <p class="todo-help">Double-click on an entry for edit</p>
+            <div class="controls">
+                <input type="text" name="" id="" class="item-value" placeholder="Add new To-Do">
+            </div>
+            <p class="todo-help">Press Enter to add an entry to the list</p>
+        </div>
+    </script>
+    <script type="text/template" id="list-template">
+        <% for (var i = 0; i < data.length; i++) {%>
+            <li data-can-edit="true" data-value="<%= data[i] %>" class="item">
+                <span class="item-text"> <%= data[i] %> </span>
+                <span class="item-delete">x</span>
+            </li>
+            <% }; %>
+    </script>
+    <script type="text/template" id="edit-box-template">
+        <div class="item-edit-box">
+            <input type="text" class="item-edit-input" name="edit" id="edit" value="<%= text %>">
+        </div>
+    </script>
+</body>
+
+</html>
